@@ -1,0 +1,20 @@
+description: Gain &ajump boost %placeholder%&r while wearing
+type: normal
+targets:
+- elytra
+enchantable: true
+max-level: 2
+tradeable: true
+conflicts: []
+placeholder: '%level%'
+effects:
+- args:
+    level: '%level%'
+    effect: jump
+    apply_to_player: true
+  id: permanent_potion_effect
+  triggers: []
+display-name: Propel
+discoverable: true
+conditions: []
+rarity: rare

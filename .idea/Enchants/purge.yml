@@ -1,0 +1,19 @@
+description: '&a15% chance&r to remove all positive effects from your opponent'
+type: special
+targets:
+- sword
+enchantable: false
+max-level: 1
+tradeable: true
+conflicts: []
+effects:
+- args:
+    chain: purge_chain
+    chance: 15
+  id: run_chain
+  triggers:
+  - melee_attack
+display-name: Purge
+discoverable: false
+conditions: []
+rarity: veryspecial

@@ -1,0 +1,22 @@
+description: Getting hit has a &a20% chance&r to teleport you to your aggressor
+mutators:
+- id: location-to-victim
+type: special
+targets:
+- boots
+enchantable: false
+max-level: 1
+tradeable: true
+conflicts:
+- streamlining
+placeholder: '%level%'
+effects:
+- args:
+    chance: 20
+  id: teleport
+  triggers:
+  - take_entity_damage
+display-name: Spacial Anomaly
+discoverable: false
+conditions: []
+rarity: veryspecial

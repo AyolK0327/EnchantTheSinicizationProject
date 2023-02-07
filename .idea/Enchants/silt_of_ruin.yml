@@ -1,0 +1,33 @@
+description: '&a%placeholder%%&r chance to deal massive damage and apply &aslowness
+  %level%&r your opponent'
+type: special
+targets:
+- boots
+enchantable: true
+max-level: 3
+tradeable: true
+conflicts:
+- supercritical
+- stray_aspect
+placeholder: '%level% * 10'
+effects:
+- args:
+    chain:
+    - args:
+        duration: 100
+        level: '%level%'
+        effect: slow
+        apply_to_player: false
+      id: potion_effect
+    - args:
+        multiplier: 2.5
+      id: damage_multiplier
+    chance: '%level% * 10'
+    runtype: normal
+  id: run_chain_inline
+  triggers:
+  - melee_attack
+display-name: Silt of Ruin
+discoverable: false
+conditions: []
+rarity: special

@@ -1,0 +1,46 @@
+placeholders: []
+description: '&8Automatically smelts mined blocks into their smelted form. Not compatible
+  with &fSilk Touch'
+type: normal
+targets:
+- pickaxe
+enabled: true
+enchantable: true
+max-level: 1
+tradeable: true
+conflicts:
+- silk_touch
+placeholder: []
+effects:
+- args:
+    drop_xp: true
+  id: autosmelt
+  triggers:
+  - block_item_drop
+- args:
+    volume: 5
+    sound: BLOCK_POINTED_DRIPSTONE_DRIP_LAVA_INTO_CAULDRON
+    pitch: 0.1
+  id: play_sound
+  filters:
+    blocks:
+    - emerald_ore
+    - deepslate_emerald_ore
+    - diamond_ore
+    - deepslate_diamond_ore
+    - gold_ore
+    - deepslate_gold_ore
+    - iron_ore
+    - deepslate_iron_ore
+    - lapis_ore
+    - deepslate_lapis_ore
+    - copper_ore
+    - deepslate_copper_ore
+    - nether_gold_ore
+    - nether_quartz_ore
+  triggers:
+  - mine_block
+display-name: '&7Auto Smelt'
+discoverable: true
+conditions: []
+rarity: common

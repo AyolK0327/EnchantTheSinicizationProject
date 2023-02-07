@@ -1,0 +1,23 @@
+description: Deal &a%placeholder%% &rextra damage in night
+type: normal
+targets:
+- sword
+enchantable: true
+max-level: 6
+tradeable: true
+conflicts:
+- diurnal
+placeholder: 5 * %level%
+effects:
+- args:
+    multiplier: 1 + 0.05 * %level%
+  id: damage_multiplier
+  triggers:
+  - melee_attack
+display-name: Nocturnal
+discoverable: true
+conditions:
+- args:
+    inverse: false
+  id: is_night
+rarity: normal

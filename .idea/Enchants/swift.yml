@@ -1,0 +1,30 @@
+display-name: "Swift"
+description: "Gain &aspeed %placeholder%&r when at low health"
+placeholder: "%level%"
+type: normal
+
+targets:
+  - boots
+conflicts:
+  - streamlining
+  - escape
+  - supersonic
+rarity: rare
+max-level: 5
+
+tradeable: true
+discoverable: true
+enchantable: true
+
+effects:
+  - id: permanent_potion_effect
+    args:
+      effect: speed
+      level: "%level%"
+      apply_to_player: true
+    triggers: [ ]
+      
+conditions: 
+- id: below_health_percent
+  args:
+    percent: 20

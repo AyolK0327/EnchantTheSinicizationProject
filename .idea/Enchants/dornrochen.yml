@@ -1,0 +1,23 @@
+description: Arrows &aricochet and split&r when contacted
+type: normal
+targets:
+- bow
+- crossbow
+enchantable: false
+max-level: 1
+tradeable: false
+conflicts:
+- pentashot
+- multishot
+- buckshot
+- piercing
+effects:
+- args:
+    chain: sleeper_chain
+  id: run_chain
+  triggers:
+  - projectile_hit
+display-name: Dornröschen
+discoverable: false
+conditions: []
+rarity: epic

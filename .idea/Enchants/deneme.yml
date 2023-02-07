@@ -1,0 +1,29 @@
+display-name: "Madenci Yürüyüş111"
+description: "Yakınındaki madenleri gösterir"
+type: veryspecial
+
+targets:
+  - pickaxe
+conflicts: [ ]
+rarity: veryspecial
+max-level: 1
+
+tradeable: false
+discoverable: false
+enchantable: false
+
+effects:
+  - effects:
+    - id: glow_nearby_blocks
+      args:
+        radius: 150 # The radius, in blocks
+        duration: 900 # How long to show the glow effect for, in ticks
+        colors:
+          SPAWNER: RED
+    args:
+      cooldown: 5
+      send_cooldown_message: true
+    triggers:
+        - alt_click
+
+conditions: [ ]

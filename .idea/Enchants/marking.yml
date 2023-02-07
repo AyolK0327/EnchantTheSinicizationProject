@@ -1,0 +1,23 @@
+display-name: "Marking"
+description: "Mark the enemy and gives repeatedly damage"
+placeholder: "%level% * 1"
+type: legendary
+targets:
+  - bow
+conflicts:
+rarity: legendary
+max-level: 5
+tradeable: true
+discoverable: true
+enchantable: true
+effects:
+- id: shoot_arrow
+  args:
+    inherit_velocity: false
+    no_source: true
+- id: bleed
+  args:
+    damage: 3
+    interval: 2
+    amount: 2
+conditions: []

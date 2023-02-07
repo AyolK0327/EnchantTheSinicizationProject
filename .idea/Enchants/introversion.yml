@@ -1,0 +1,27 @@
+description: Gives a &a%placeholder%&r bonus to melee damage against players
+type: normal
+targets:
+- sword
+enchantable: true
+max-level: 5
+tradeable: true
+conflicts:
+- sharpness
+- smite
+- bane_of_arthropods
+- slaughter
+- brightness
+placeholder: 2.5 * %level%
+effects:
+- args:
+    damage: 2.5 * %level%
+  id: add_damage
+  filters:
+    entities:
+    - player
+  triggers:
+  - melee_attack
+display-name: Introversion
+discoverable: true
+conditions: []
+rarity: common

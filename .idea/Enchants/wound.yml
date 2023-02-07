@@ -1,0 +1,28 @@
+placeholders:
+  duration: 0.75 * (%level% + 2)
+  damage: '1'
+  chance: '%level% * 3'
+description: Gives a &a%chance%%&r chance to give your opponent &a%damage% &rdamage
+  for &a%duration%&r seconds
+type: normal
+targets:
+- bow
+- crossbow
+enchantable: true
+max-level: 7
+tradeable: true
+conflicts:
+- sharpness
+effects:
+- args:
+    damage: 1
+    amount: '%level% + 2'
+    chance: 3 * %level%
+    interval: 15
+  id: bleed
+  triggers:
+  - bow_attack
+display-name: Wound
+discoverable: true
+conditions: []
+rarity: legendary

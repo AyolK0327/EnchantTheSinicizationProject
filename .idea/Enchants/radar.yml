@@ -1,0 +1,72 @@
+placeholders:
+  seconds: 2 * %level%
+  radius: 8 + 2 * %level%
+description: Makes chests within &a%radius%&r blocks shine through walls for &a%seconds%&r
+  seconds
+type: spell
+targets:
+- shovel
+enchantable: true
+max-level: 3
+tradeable: true
+conflicts: []
+effects:
+- args:
+    cooldown: 300
+    send_cooldown_message: true
+  effects:
+  - args:
+      duration: 120 * %level%
+      radius: 8 + 2 * %level%
+      colors:
+        chest: gold
+        trapped_chest: gold
+    id: glow_nearby_blocks
+  - args:
+      volume: 15
+      sound: block_beacon_power_select
+      pitch: 1.0
+    id: play_sound
+  - args:
+      volume: 15
+      sound: block_bell_use
+      pitch: 0.7
+    id: play_sound
+  - args:
+      particle-amount: 1
+      animation: ground_spiral
+      use-eye-location: false
+      particle: sonic_boom
+      particle_args:
+        duration: 20
+        scalar: 1.618
+        distance-scalar: 3
+      entity: player
+    id: particle_animation
+  triggers:
+  - alt_click
+display-name: Radar
+discoverable: true
+conditions:
+- args:
+    items:
+    - wooden_shovel radar:1
+    - stone_shovel radar:1
+    - iron_shovel radar:1
+    - gold_shovel radar:1
+    - diamond_shovel radar:1
+    - netherite_shovel radar:1
+    - wooden_shovel radar:2
+    - stone_shovel radar:2
+    - iron_shovel radar:2
+    - gold_shovel radar:2
+    - diamond_shovel radar:2
+    - netherite_shovel radar:2
+    - wooden_shovel radar:3
+    - stone_shovel radar:3
+    - iron_shovel radar:3
+    - gold_shovel radar:3
+    - diamond_shovel radar:3
+    - netherite_shovel radar:3
+  id: in_mainhand
+rarity: special

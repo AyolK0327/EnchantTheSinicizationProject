@@ -1,0 +1,21 @@
+placeholders:
+  damage: '%level% * 0.9'
+description: 大幅度增加物品的耐久性.
+type: special
+targets:
+- all
+enchantable: true
+max-level: 6
+tradeable: false
+conflicts: []
+effects:
+- args:
+    title: '&a %player% 是个傻逼!'
+    subtitle: '&3臭傻逼'
+  id: send_title
+  triggers:
+  - take_damage
+display-name: 材质硬化
+discoverable: false
+conditions: []
+rarity: special

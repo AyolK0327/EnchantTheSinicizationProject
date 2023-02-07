@@ -1,0 +1,22 @@
+description: Deal &a%placeholder%% &rmore damage against bosses
+type: normal
+targets:
+- bow
+- crossbow
+enchantable: true
+max-level: 8
+tradeable: true
+conflicts: []
+placeholder: 10 * %level%
+effects:
+- args:
+    multiplier: 1 + 0.1 * %level%
+  id: damage_multiplier
+  filters:
+    only_bosses: true
+  triggers:
+  - bow_attack
+display-name: Boss Hunter
+discoverable: true
+conditions: []
+rarity: rare

@@ -1,0 +1,22 @@
+description: Gives a &a%placeholder%%&r bonus to boss drop chances
+type: normal
+targets:
+- sword
+- bow
+- crossbow
+- trident
+enchantable: true
+max-level: 5
+tradeable: true
+conflicts: []
+placeholder: 5 * %level%
+dependencies:
+- EcoBosses
+effects:
+- args:
+    multiplier: 1 + 0.05 * %level%
+  id: boss_drop_chance_multiplier
+display-name: Boss Fortune
+discoverable: true
+conditions: []
+rarity: common

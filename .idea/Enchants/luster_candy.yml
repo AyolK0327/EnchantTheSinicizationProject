@@ -1,0 +1,21 @@
+description: Gain a short burst of strength and resistance
+type: spell
+targets:
+- sword
+enchantable: true
+max-level: 1
+tradeable: true
+conflicts:
+- vitalize
+- salvation
+effects:
+- args:
+    cooldown: 420
+    chain: lc_chain
+  id: run_chain
+  triggers:
+  - alt_click
+display-name: Luster Candy
+discoverable: true
+conditions: []
+rarity: legendary

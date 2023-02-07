@@ -1,0 +1,18 @@
+description: Blocks damage to the &asame degree as the same level of protection&r
+type: special
+targets:
+- elytra
+enchantable: false
+max-level: 4
+tradeable: true
+conflicts: []
+effects:
+- args:
+    multiplier: 1 - (%level% * 0.04)
+  id: damage_multiplier
+  triggers:
+  - take_entity_damage
+display-name: Fortified
+discoverable: false
+conditions: []
+rarity: veryspecial

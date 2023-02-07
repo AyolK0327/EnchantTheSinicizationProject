@@ -1,0 +1,19 @@
+description: Has a chance to lifesteal one heart
+type: normal
+targets:
+- hoe
+enchantable: false
+max-level: 1
+tradeable: true
+conflicts: []
+effects:
+- args:
+    amount: 2
+    chance: 15
+  id: give_health
+  triggers:
+  - melee_attack
+display-name: Soul Harvest
+discoverable: true
+conditions: []
+rarity: epic

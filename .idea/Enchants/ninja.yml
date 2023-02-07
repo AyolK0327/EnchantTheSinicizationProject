@@ -1,0 +1,22 @@
+description: Deal &a+%placeholder%&r damage while sneaking
+type: normal
+targets:
+- sword
+enchantable: true
+max-level: 5
+tradeable: true
+conflicts: []
+placeholder: 0.5 + %level% * 0.5
+effects:
+- args:
+    damage: 0.5 + %level% * 0.5
+  id: add_damage
+  triggers:
+  - melee_attack
+display-name: Ninja
+discoverable: true
+conditions:
+- args:
+    is_sneaking: true
+  id: is_sneaking
+rarity: rare

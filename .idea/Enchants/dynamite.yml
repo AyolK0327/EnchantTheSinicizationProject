@@ -1,0 +1,38 @@
+description: Mines blocks in a &a%placeholder%x%placeholder%&r area
+type: spell
+targets:
+- pickaxe
+enchantable: true
+max-level: 2
+tradeable: true
+conflicts: []
+placeholder: 1 + %level% * 4
+effects:
+- args:
+    cooldown: 60
+    send_cooldown_message: true
+  effects:
+  - args:
+      amount: '%level% * 2'
+      power: 0
+    id: create_explosion
+  - args:
+      blacklisted_blocks:
+      - obsidian
+      - barrier
+      - bedrock
+      check_hardness: false
+      radius: 2 * %level%
+    id: mine_radius
+  - args:
+      volume: 1
+      sound: entity_dragon_fireball_explode
+      pitch: 1
+    id: play_sound
+  - id: break_block
+  triggers:
+  - alt_click
+display-name: Dynamite
+discoverable: true
+conditions: []
+rarity: legendary

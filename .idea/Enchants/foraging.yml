@@ -1,0 +1,21 @@
+description: Gives a &a%placeholder%%&r boost to apple drops from leaves
+type: normal
+targets:
+- shears
+enchantable: true
+max-level: 4
+tradeable: true
+conflicts: []
+placeholder: ceil(((1 / (%level% + 2)) + ((%level% + 1) / 2)) * 100 - 100)
+effects:
+- args:
+    on_items:
+    - apple
+    fortune: '%level%'
+  id: multiply_drops
+  triggers:
+  - block_item_drop
+display-name: Foraging
+discoverable: true
+conditions: []
+rarity: common

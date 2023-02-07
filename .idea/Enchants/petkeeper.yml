@@ -1,0 +1,20 @@
+description: Gives a &a%placeholder%%&r boost to pet experience
+type: normal
+targets:
+- armor
+enchantable: true
+max-level: 4
+tradeable: true
+conflicts: []
+placeholder: '%level%'
+dependencies:
+- EcoPets
+effects:
+- args:
+    multiplier: 1 + 0.01 * %level%
+  id: pet_xp_multiplier
+display-name: Petkeeper
+discoverable: true
+dont-register: true
+conditions: []
+rarity: epic

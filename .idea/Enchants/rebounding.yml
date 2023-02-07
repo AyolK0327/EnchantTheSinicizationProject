@@ -1,0 +1,20 @@
+description: Rebounds &a%placeholder%%&r of incoming damage back at your attacker
+type: normal
+targets:
+- shield
+enchantable: true
+max-level: 3
+tradeable: true
+conflicts: []
+placeholder: 20 + %level% * 10
+effects:
+- args:
+    damage: '%v% * (0.2 + %level% * 0.1)'
+    use-source: false
+  id: damage_victim
+  triggers:
+  - shield_block
+display-name: Rebounding
+discoverable: true
+conditions: []
+rarity: epic

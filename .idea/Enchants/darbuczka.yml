@@ -1,0 +1,42 @@
+# The ID of the enchantment is the name of the .yml file,
+# for example razor.yml has the ID of razor
+# You can place enchantments anywhere in this folder,
+# including in subfolders if you want to organize your enchantment configs
+# _example.yml is not loaded.
+
+display-name: "Dar od Buczka" # The name of the enchantment in-game
+description: "Niesłychany dar! Enchant pożądany przez wielu... lecz co on daje?" # The description of the enchantment
+placeholder: "%level% * 20" # The placeholder to show in the enchantment description (optional, can only use custom placeholders)
+placeholders: # Extra placeholders to show in the enchantment description (optional)
+  damage: "%level% * 2" # Here, %damage% would be the extra placeholder to use
+type: special # The enchantment type, from types.yml
+
+targets: # The items that the enchantment can be applied to, see targets.yml
+  - sword
+#conflicts: # The enchantments that conflict with this
+rarity: artifact # The rarity of the enchantment, see rarity.yml
+max-level: 1 # The max level of the enchantment
+
+tradeable: true # If the enchantment can be obtained from villagers
+discoverable: true # If the enchantment can generate naturally in chests
+enchantable: true # If the enchantment can be obtained from enchanting tables
+
+# The effects of the enchantment (i.e. the functionality)
+# See here: https://plugins.auxilor.io/effects/configuring-an-effect
+# Use %level% as a placeholder for the enchantment level
+effects:
+  - id: luck_multiplier
+    args:
+      multiplier: 2.5 # The multiplier for the luck attribute
+  - id: xp_multiplier
+    args:
+      multiplier: 2.25
+  - id: add_stat_temporarily
+    args:
+      stat: strength # The name of the stat
+      amount: 10 # The amount to add (or subtract, allows negative values)
+      duration: 20 # The duration (in ticks)
+
+# The conditions required to use the enchantment,
+# you can use %level% as a placeholder here too
+conditions: []

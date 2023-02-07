@@ -1,0 +1,32 @@
+description: Hay un &a%placeholder%% &rde obtener almas al matar
+type: legendary
+targets:
+- sword
+- axes
+- how
+- shovel
+- pickaxe
+enchantable: true
+max-level: 7
+tradeable: true
+conflicts: []
+placeholder: 8 * %level%
+effects:
+- args:
+    chain:
+      effects:
+      - args:
+          command: eco give %player% 1 Alma
+        id: run_command
+      - args:
+          command: adv toast:{tittle=<font:faith:rub><red>Alma Obtenida!;icon=animapack:player_soul;cmd=0;target=%player%}
+        id: run_command
+    chance: (8 * %level%)
+    run-type: normal
+  id: run_chain_inline
+  triggers:
+  - kill
+display-name: Alma de Hakkar
+discoverable: true
+conditions: []
+rarity: mythic

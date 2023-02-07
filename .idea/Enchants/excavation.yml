@@ -1,0 +1,21 @@
+description: Digs &a%placeholder%&r extra blocks
+type: normal
+targets:
+- shovel
+enchantable: true
+max-level: 5
+tradeable: true
+conflicts: []
+placeholder: '%level%'
+effects:
+- args:
+    amount: '%level%'
+    check-hardness: true
+    disable-on-sneak: true
+  id: drill
+  triggers:
+  - mine_block
+display-name: Excavation
+discoverable: true
+conditions: []
+rarity: legendary

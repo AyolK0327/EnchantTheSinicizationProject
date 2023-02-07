@@ -1,0 +1,31 @@
+description: Deal &a%placeholder%%&r more damage to the warden while in the deep dark
+type: common
+targets:
+- sword
+enchantable: true
+max-level: 5
+tradeable: true
+conflicts:
+- sharpness
+- smite
+- bane_of_arthropods
+- introversion
+- slaughter
+placeholder: 4 * %level%
+effects:
+- args:
+    damage: 4 * %level%
+  id: add_damage
+  filters:
+    entities:
+    - warden
+  triggers:
+  - melee_attack
+display-name: Brightness
+discoverable: true
+conditions:
+- args:
+    biomes:
+    - deep_dark
+  id: in_biome
+rarity: legendary

@@ -1,0 +1,18 @@
+description: Gives hero of the village effect at level &a%placeholder%%
+type: normal
+targets:
+- helmet
+enchantable: true
+max-level: 6
+tradeable: true
+conflicts: []
+placeholder: '%level%'
+effects:
+- args:
+    level: 1 * %level%
+    effect: HERO_OF_THE_VILLAGE
+  id: permanent_potion_effect
+display-name: Hero
+discoverable: true
+conditions: []
+rarity: legendary

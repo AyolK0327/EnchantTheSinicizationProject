@@ -1,0 +1,33 @@
+placeholders:
+  damage: 3 * %level%
+  radius: 2 + %level%
+description: Gives &a%damage%&r damage to all entities in a &a%radius%&r block radius
+type: spell
+targets:
+- sword
+enchantable: true
+max-level: 3
+tradeable: true
+conflicts: []
+effects:
+- args:
+    cooldown: 40
+    send_cooldown_message: true
+  effects:
+  - args:
+      damage: 3 * %level%
+      damage_as_player: false
+      damage_self: false
+      radius: 2 + %level%
+    id: damage_nearby_entities
+  - args:
+      volume: 1
+      sound: entity_ender_dragon_growl
+      pitch: 1
+    id: play_sound
+  triggers:
+  - alt_click
+display-name: Rumble
+discoverable: true
+conditions: []
+rarity: epic

@@ -1,0 +1,23 @@
+description: Gain &aswiftness %placeholder%&r when hit
+type: normal
+targets:
+- elytra
+enchantable: true
+max-level: 2
+tradeable: true
+conflicts:
+- tailwind
+placeholder: '%level%'
+effects:
+- args:
+    duration: 100
+    level: '%level%'
+    effect: speed
+    apply-to-player: true
+  id: potion_effect
+  triggers:
+  - take_damage
+display-name: Whiplash
+discoverable: true
+conditions: []
+rarity: rare

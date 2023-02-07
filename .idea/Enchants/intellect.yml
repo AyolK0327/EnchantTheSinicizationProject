@@ -1,0 +1,28 @@
+description: Massively increases dropped experience &a+%placeholder%%
+type: special
+targets:
+- bow
+- crossbow
+- trident
+- pickaxe
+- axe
+- shovel
+- hoe
+- sword
+enchantable: true
+max-level: 2
+tradeable: true
+conflicts:
+- splash
+- wisdom
+placeholder: (110 * %level%)
+effects:
+- args:
+    multiplier: 1 + 1.1 * %level%
+  id: xp_multiplier
+  triggers:
+  - gain_xp
+display-name: Intellect
+discoverable: true
+conditions: []
+rarity: legendary

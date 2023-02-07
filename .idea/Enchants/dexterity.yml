@@ -1,0 +1,18 @@
+description: Increases attack speed by &a%placeholder%%
+type: normal
+targets:
+- sword
+- axe
+enchantable: true
+max-level: 2
+tradeable: true
+conflicts: []
+placeholder: '%level% * 10'
+effects:
+- args:
+    multiplier: 1 + 0.1 * %level%
+  id: attack_speed_multiplier
+display-name: Dexterity
+discoverable: true
+conditions: []
+rarity: epic

@@ -1,0 +1,20 @@
+description: 每级额外造成 &a%placeholder% &r伤害，附魔时将替换锋利
+type: normal
+targets:
+- sword
+- axe
+enchantable: true
+max-level: 2
+tradeable: true
+conflicts: []
+placeholder: '%level%*1.5'
+effects:
+- args:
+    multiplier: 1 + 0.2 * %level%
+  id: damage_multiplier
+  triggers:
+  - melee_attack
+display-name: 进阶锋利
+discoverable: true
+conditions: []
+rarity: legendary

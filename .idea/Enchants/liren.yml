@@ -1,0 +1,20 @@
+description: 增加 &a%placeholder%&r伤害。
+type: special
+targets:
+- sword
+enchantable: true
+max-level: 1
+tradeable: false
+conflicts:
+- sharpness
+placeholder: 1.5 * %level%
+effects:
+- args:
+    damage: 1.5 * %level%
+  id: damage_victim
+  triggers:
+  - melee_attack
+display-name: 利刃
+discoverable: false
+conditions: []
+rarity: veryspecial

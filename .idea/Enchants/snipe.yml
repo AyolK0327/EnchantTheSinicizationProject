@@ -1,0 +1,22 @@
+placeholders:
+  damage: 1 * %level%
+  blocks: 11 - ceil(%level% / 2)
+description: Arrows deal &a%damage%%&r more damage for each &a%blocks%&r blocks travelled
+type: normal
+targets:
+- bow
+- crossbow
+enchantable: true
+max-level: 4
+tradeable: true
+conflicts: []
+effects:
+- args:
+    multiplier: 1 + (%distance% / (11 - ceil(%level% / 2))) * 0.01 * %level%
+  id: damage_multiplier
+  triggers:
+  - bow_attack
+display-name: Snipe
+discoverable: true
+conditions: []
+rarity: epic

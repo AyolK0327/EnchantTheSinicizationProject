@@ -1,0 +1,21 @@
+description: Deal &a%placeholder%%&r more damage in the air
+type: normal
+targets:
+- bow
+- crossbow
+enchantable: true
+max-level: 3
+tradeable: true
+conflicts: []
+placeholder: 10 * %level%
+effects:
+- args:
+    multiplier: 1 + 0.1 * %level%
+  id: damage_multiplier
+  triggers:
+  - bow_attack
+display-name: Jumpshot
+discoverable: true
+conditions:
+- id: in_air
+rarity: uncommon

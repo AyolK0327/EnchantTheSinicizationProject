@@ -1,0 +1,30 @@
+display-name: "&5Caçador de Dragões"
+description: "Aumenta o dano causado em Dragões"
+placeholder: "1 + 0.5 * %level%"
+type: rare
+
+targets:
+  - bow
+  - crossbow
+  - sword
+  - axe  
+conflicts: [ ]
+rarity: uncommon
+max-level: 5
+
+tradeable: false
+discoverable: false
+enchantable: false
+
+effects:
+  - id: add_damage
+    args:
+      damage: "1 + 0.5 * %level%"
+    triggers:
+      - melee_attack
+      - bow_attack
+    filters:
+      entities:
+        - ender_dragon
+
+conditions: [ ]

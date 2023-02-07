@@ -1,0 +1,21 @@
+description: Dying spawns a harming cloud for &a%placeholder%&r seconds
+type: normal
+targets:
+- helmet
+enchantable: true
+max-level: 2
+tradeable: true
+conflicts: []
+placeholder: 1 + %level%
+effects:
+- args:
+    duration: 20 + %level% * 20
+    level: 1
+    effect: harm
+  id: spawn_potion_cloud
+  triggers:
+  - death
+display-name: Haunting
+discoverable: true
+conditions: []
+rarity: epic

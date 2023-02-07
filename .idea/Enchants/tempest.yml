@@ -1,0 +1,21 @@
+description: Thrown tridents create lightning at the landing spot regardless of the
+  weather
+type: special
+targets:
+- trident
+enchantable: true
+max-level: 1
+tradeable: true
+conflicts:
+- channeling
+- storm_surge
+effects:
+- args:
+    amount: 1
+  id: strike_lightning
+  triggers:
+  - projectile_hit
+display-name: Tempest
+discoverable: false
+conditions: []
+rarity: veryspecial

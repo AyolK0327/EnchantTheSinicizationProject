@@ -1,0 +1,19 @@
+description: You have been destroyed by a grammar corrector
+type: mythical
+targets:
+- shield
+enchantable: true
+max-level: 3
+tradeable: true
+conflicts: []
+effects:
+- args:
+    damage: '%v% * (%level%)'
+    use-source: false
+  id: damage_victim
+  triggers:
+  - shield_block
+display-name: You're
+discoverable: true
+conditions: []
+rarity: veryspecial

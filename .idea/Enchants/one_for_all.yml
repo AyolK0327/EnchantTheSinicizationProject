@@ -1,0 +1,21 @@
+description: Increases damage by &a%placeholder%%&r but conflicts with all other enchantments
+type: special
+targets:
+- sword
+- axe
+enchantable: true
+max-level: 1
+tradeable: true
+conflicts:
+- everything
+placeholder: '500'
+effects:
+- args:
+    multiplier: 5
+  id: damage_multiplier
+  triggers:
+  - melee_attack
+display-name: One for All
+discoverable: true
+conditions: []
+rarity: veryspecial

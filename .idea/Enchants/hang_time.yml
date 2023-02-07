@@ -1,0 +1,20 @@
+description: Gain &aslow fall %placeholder%&r while wearing
+type: normal
+targets:
+- elytra
+enchantable: true
+max-level: 2
+tradeable: true
+conflicts: []
+placeholder: '%level%'
+effects:
+- args:
+    level: '%level%'
+    effect: slow_falling
+    apply_to_player: true
+  id: permanent_potion_effect
+  triggers: []
+display-name: Hang Time
+discoverable: true
+conditions: []
+rarity: rare

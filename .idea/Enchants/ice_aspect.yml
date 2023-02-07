@@ -1,0 +1,33 @@
+description: Congela al objetivo durante &a%placeholder% &8segundos
+type: normal
+targets:
+- sword
+enchantable: true
+max-level: 2
+tradeable: true
+conflicts:
+- fire_aspect
+placeholder: 2 * %level%
+effects:
+- args:
+    ticks: 60 + (20 * %level%)
+  id: set_freeze_ticks
+  filters:
+    entities:
+    - spider
+    - cave_spider
+    - zombie
+    - skeleton
+    - wither_skeleton
+    - player
+    - slime
+    - magma_cube
+    - blaze
+    - enderman
+    - witch
+  triggers:
+  - melee_attack
+display-name: Aspecto de hielo
+discoverable: true
+conditions: []
+rarity: uncommon

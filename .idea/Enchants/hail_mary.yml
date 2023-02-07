@@ -1,0 +1,29 @@
+description: While at half a heart, gain strength 3 until health is regenerated or
+  the item is swapped
+type: special
+targets:
+- sword
+- axe
+- bow
+- crossbow
+- trident
+- hoe
+enchantable: true
+max-level: 2
+tradeable: true
+conflicts:
+- streamlining
+placeholder: '%level%'
+effects:
+- args:
+    level: 3
+    effect: increase_damage
+  id: permanent_potion_effect
+  triggers: []
+display-name: Hail Mary
+discoverable: false
+conditions:
+- args:
+    percent: 6
+  id: below_health_percent
+rarity: special

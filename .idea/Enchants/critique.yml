@@ -1,0 +1,25 @@
+display-name: "Coup critique"
+description: "Augmente les dégâts critique de &a%placeholder%%"
+placeholder: "30 * %level%"
+type: normal
+
+targets:
+  - sword
+  - axe
+conflicts:
+  - premiercoup
+rarity: epic
+max-level: 2
+
+tradeable: false
+discoverable: false
+enchantable: false
+
+effects:
+  - id: crit_multiplier
+    args:
+      multiplier: "0.3 * %level%"
+    triggers:
+      - melee_attack
+
+conditions: [ ]

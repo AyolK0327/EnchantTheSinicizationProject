@@ -1,0 +1,18 @@
+description: You can breathe underwater
+type: special
+targets:
+- helmet
+enchantable: false
+max-level: 1
+tradeable: true
+conflicts: []
+effects:
+- args:
+    level: 1
+    effect: water_breathing
+  id: permanent_potion_effect
+  triggers: []
+display-name: Gills
+discoverable: true
+conditions: []
+rarity: veryspecial

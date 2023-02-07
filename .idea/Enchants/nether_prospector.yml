@@ -1,0 +1,25 @@
+description: Gives a &a%placeholder%%&r boost to ancient debris drops
+type: normal
+targets:
+- pickaxe
+enchantable: true
+max-level: 2
+tradeable: true
+conflicts:
+- fortune
+- silk_touch
+placeholder: ceil(((1 / (%level% + 2)) + ((%level% + 1) / 2)) * 100 - 100)
+effects:
+- args:
+    on_items:
+    - ancient_debris
+    fortune: '%level%'
+  id: multiply_drops
+  filters:
+    player_placed: false
+  triggers:
+  - block_item_drop
+display-name: Nether Prospector
+discoverable: true
+conditions: []
+rarity: legendary

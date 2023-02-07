@@ -1,0 +1,17 @@
+description: Increases the hunger gained by eating food by &a%placeholder%%
+type: normal
+targets:
+- chestplate
+enchantable: true
+max-level: 2
+tradeable: true
+conflicts: []
+placeholder: '%level% * 12.5'
+effects:
+- args:
+    multiplier: 1 * %level% * 0.125
+  id: food_multiplier
+display-name: Metabolism
+discoverable: true
+conditions: []
+rarity: legendary

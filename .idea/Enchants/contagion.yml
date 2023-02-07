@@ -1,0 +1,29 @@
+description: Gives a &a%placeholder%%&r chance to spawn a cloud of poison around where
+  your trident lands
+type: normal
+targets:
+- trident
+enchantable: true
+max-level: 2
+tradeable: true
+conflicts: []
+placeholder: 5 * %level%
+effects:
+- args:
+    duration: 60
+    level: 1
+    effect: poison
+  id: spawn_potion_cloud
+  triggers:
+  - projectile_hit
+- args:
+    volume: 1
+    sound: entity_splash_potion_break
+    pitch: 0.7
+  id: play_sound
+  triggers:
+  - projectile_hit
+display-name: Contagion
+discoverable: true
+conditions: []
+rarity: legendary

@@ -1,0 +1,20 @@
+description: Shoot 3 arrows instead of 1
+type: normal
+targets:
+- bow
+enchantable: true
+max-level: 1
+tradeable: true
+conflicts: []
+effects:
+- args:
+    chain-args:
+      arrows: 1
+    chain: shoot_extra_arrows
+  id: run_chain
+  triggers:
+  - shoot_bow
+display-name: Tripleshot
+discoverable: true
+conditions: []
+rarity: legendary

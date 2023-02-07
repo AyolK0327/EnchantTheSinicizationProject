@@ -1,0 +1,28 @@
+display-name: "Explosive Touch"
+description: "mine up to &a%placeholder%&r blocks at once"
+placeholder: "8 * %level%"
+type: normal
+
+targets:
+  - pickaxe
+conflicts: [ ]
+rarity: uncommon
+max-level: 6
+
+tradeable: true
+discoverable: true
+enchantable: true
+
+effects:
+  - id: mine_vein
+    args:
+      limit: "8 * %level%"
+      blocks:
+        - stone
+        - andesite
+        - diorite
+        - granite
+    triggers:
+      - mine_block
+
+conditions: [ ]

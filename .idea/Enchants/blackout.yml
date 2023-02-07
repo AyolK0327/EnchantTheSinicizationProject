@@ -1,0 +1,26 @@
+placeholders:
+  seconds: 4 + ceil(%level% / 2)
+  chance: 6 + %level%
+description: Gives a &a%chance%%&r chance to give your opponent darkness for &a%seconds%&r
+  seconds
+type: normal
+targets:
+- sword
+enchantable: true
+max-level: 4
+tradeable: true
+conflicts: []
+effects:
+- args:
+    duration: 80 + ceil(%level% / 2) * 20
+    chance: 6 + %level%
+    level: 1
+    effect: darkness
+    apply-to-player: false
+  id: potion_effect
+  triggers:
+  - melee_attack
+display-name: Blackout
+discoverable: true
+conditions: []
+rarity: legendary

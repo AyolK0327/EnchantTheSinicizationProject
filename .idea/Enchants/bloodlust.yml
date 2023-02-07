@@ -1,0 +1,23 @@
+description: Has a chance to give regeneration 3 for a short time on attack
+type: normal
+targets:
+- sword
+- axe
+enchantable: true
+max-level: 1
+tradeable: true
+conflicts: []
+effects:
+- args:
+    duration: 40
+    chance: 5
+    level: 3
+    effect: regeneration
+    apply_to_player: true
+  id: potion_effect
+  triggers:
+  - melee_attack
+display-name: Bloodlust
+discoverable: true
+conditions: []
+rarity: epic

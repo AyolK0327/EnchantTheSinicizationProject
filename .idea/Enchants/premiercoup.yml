@@ -1,0 +1,27 @@
+display-name: "Premier coup"
+description: "&a+%placeholder%% &rdégâts si la cible à la santé Max."
+placeholder: "120 * %level%"
+type: normal
+
+targets:
+  - sword
+  - axe
+conflicts:
+  - critique
+rarity: uncommon
+max-level: 2
+
+tradeable: false
+discoverable: false
+enchantable: false
+
+effects:
+  - id: damage_multiplier
+    args:
+      multiplier: "1.2 * %level%"
+    triggers:
+      - melee_attack
+    filters:
+      on_max_health: true
+
+conditions: [ ]

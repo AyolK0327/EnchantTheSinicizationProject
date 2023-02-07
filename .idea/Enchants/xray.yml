@@ -1,0 +1,50 @@
+placeholders:
+  seconds: 1 + %level%
+  radius: 3 + 2 * %level%
+description: Makes ores within &a%radius%&r blocks shine through walls for &a%seconds%&r
+  seconds
+type: spell
+targets:
+- pickaxe
+enchantable: true
+max-level: 3
+tradeable: true
+conflicts: []
+effects:
+- args:
+    cooldown: 90
+    send_cooldown_message: true
+  effects:
+  - args:
+      duration: 20 * (%level% + 1)
+      radius: 8 + 2 * %level%
+      colors:
+        redstone_ore: red
+        deepslate_emerald_ore: green
+        diamond_ore: aqua
+        deepslate_lapis_ore: blue
+        deepslate_coal_ore: black
+        deepslate_diamond_ore: aqua
+        copper_ore: gold
+        gold_ore: yellow
+        deepslate_redstone_ore: red
+        iron_ore: gray
+        deepslate_copper_ore: gold
+        ancient_debris: dark_red
+        lapis_ore: blue
+        coal_ore: black
+        deepslate_iron_ore: gray
+        deepslate_gold_ore: yellow
+        emerald_ore: green
+    id: glow_nearby_blocks
+  - args:
+      volume: 1
+      sound: entity_enderman_teleport
+      pitch: 0.8
+    id: play_sound
+  triggers:
+  - alt_click
+display-name: Xray
+discoverable: true
+conditions: []
+rarity: special

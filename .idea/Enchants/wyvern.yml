@@ -1,0 +1,19 @@
+description: Gives a &a%placeholder%%&r bonus to melee damage
+type: normal
+targets:
+- elytra
+enchantable: true
+max-level: 2
+tradeable: true
+conflicts: []
+placeholder: 10 * %level%
+effects:
+- args:
+    multiplier: 1 + (0.15 * %level%)
+  id: damage_multiplier
+  triggers:
+  - melee_attack
+display-name: Wyvern
+discoverable: true
+conditions: []
+rarity: epic

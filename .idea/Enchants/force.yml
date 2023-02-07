@@ -1,0 +1,20 @@
+display-name: "Force"
+description: "Massive increase shot damage"
+placeholder: "%level% * 12"
+type: veryspecial
+targets:
+  - bow
+conflicts:
+  - power
+rarity: veryspecial
+max-level: 5
+tradeable: false
+discoverable: true
+enchantable: true
+effects:
+  - args:
+      multiplier: 2 + 0.12 * %level%
+    id: damage_multiplier
+    triggers:
+      - bow_attack
+conditions: []

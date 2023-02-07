@@ -1,0 +1,23 @@
+description: Extreme knockback &a+%placeholder%%
+type: special
+targets:
+- sword
+- axe
+enchantable: true
+max-level: 3
+tradeable: true
+conflicts:
+- knockback
+- tornado
+- grapple
+placeholder: 20 * %level%
+effects:
+- args:
+    velocity: (%level% / 0.25 / 10)
+  id: knock_away
+  triggers:
+  - melee_attack
+display-name: Annihilate
+discoverable: true
+conditions: []
+rarity: legendary

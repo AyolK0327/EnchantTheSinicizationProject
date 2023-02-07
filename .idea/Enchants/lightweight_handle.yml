@@ -1,0 +1,18 @@
+description: Allows you to swing a hoe much faster. Good for combat hoe builds
+type: normal
+targets:
+- hoe
+enchantable: false
+max-level: 1
+tradeable: true
+conflicts: []
+placeholder: '%level%'
+effects:
+- args:
+    multiplier: 2
+  id: attack_speed_multiplier
+  triggers: []
+display-name: Lightweight Handle
+discoverable: true
+conditions: []
+rarity: rare

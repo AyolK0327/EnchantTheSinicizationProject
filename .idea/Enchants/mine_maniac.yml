@@ -1,0 +1,25 @@
+display-name: "Маньяк из Шахты"
+
+placeholder: "20 * %level%"
+type: special
+
+targets:
+  - pickaxe
+rarity: special
+max-level: 1
+
+tradeable: true
+discoverable: true
+enchantable: true
+
+effects:
+  - id: haste
+    args:
+      effect: haste
+      level: 2
+      duration: 20
+      apply-to-player: true
+    triggers:
+      - mine_block
+
+conditions: [ ]

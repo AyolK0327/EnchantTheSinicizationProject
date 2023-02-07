@@ -1,0 +1,30 @@
+description: Wearing elytras with this enchant &aremoves most of your health&r, but
+  grants &aabsorption and resistance 3&r
+type: special
+targets:
+- elytra
+enchantable: true
+max-level: 1
+tradeable: true
+conflicts:
+- sound_barrier
+- spirit_guard
+effects:
+- args:
+    level: 1
+    effect: absorption
+  id: permanent_potion_effect
+  triggers: []
+- args:
+    level: 3
+    effect: damage_resistance
+  id: permanent_potion_effect
+  triggers: []
+- args:
+    health: -18c
+  id: bonus_health
+  triggers: []
+display-name: Ghost Armor
+discoverable: true
+conditions: []
+rarity: special

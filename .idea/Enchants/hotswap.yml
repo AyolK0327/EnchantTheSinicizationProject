@@ -1,0 +1,35 @@
+description: Swapping to this weapon from your offhand gives a short burst of strength
+  &a%placeholder%&r
+type: normal
+targets:
+- hoe
+- axe
+- sword
+enchantable: true
+max-level: 2
+tradeable: true
+conflicts: []
+placeholder: '%level%'
+effects:
+- args:
+    chain:
+    - args:
+        duration: 40
+        level: '%level%'
+        effect: increase_damage
+        apply_to_player: true
+      id: potion_effect
+    - args:
+        volume: 4
+        sound: entity_firework_rocket_twinkle
+        pitch: 1
+      id: play_sound
+    runtype: normal
+    cooldown: 1
+  id: run_chain_inline
+  triggers:
+  - swap_hands
+display-name: Hotswap
+discoverable: true
+conditions: []
+rarity: legendary

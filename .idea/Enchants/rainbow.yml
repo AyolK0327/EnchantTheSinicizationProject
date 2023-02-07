@@ -1,0 +1,132 @@
+placeholders:
+  chance: 25 * %level%
+description: '&7A &a%chance%% &7to drop a flower or &7a dye when breaking leaves.'
+type: normal
+rairty: rare
+targets:
+- shears
+enchantable: true
+max-level: 4
+tradeable: true
+conflicts:
+- silk_touch
+effects:
+- args:
+    chain:
+      effects:
+      - args:
+          item: white_dye 1
+        id: drop_item_for_player
+      - args:
+          item: orange_dye 1
+        id: drop_item_for_player
+      - args:
+          item: magenta_dye 1
+        id: drop_item_for_player
+      - args:
+          item: light_blue_dye 1
+        id: drop_item_for_player
+      - args:
+          item: yellow_dye 1
+        id: drop_item_for_player
+      - args:
+          item: lime_dye 1
+        id: drop_item_for_player
+      - args:
+          item: pink_dye 1
+        id: drop_item_for_player
+      - args:
+          item: gray_dye 1
+        id: drop_item_for_player
+      - args:
+          item: light_gray_dye 1
+        id: drop_item_for_player
+      - args:
+          item: cyan_dye 1
+        id: drop_item_for_player
+      - args:
+          item: purple_dye 1
+        id: drop_item_for_player
+      - args:
+          item: blue_dye 1
+        id: drop_item_for_player
+      - args:
+          item: brown_dye 1
+        id: drop_item_for_player
+      - args:
+          item: green_dye 1
+        id: drop_item_for_player
+      - args:
+          item: red_dye 1
+        id: drop_item_for_player
+      - args:
+          item: black_dye 1
+        id: drop_item_for_player
+      - args:
+          item: dandelion 1
+        id: drop_item_for_player
+      - args:
+          item: poppy 1
+        id: drop_item_for_player
+      - args:
+          item: blue_orchid 1
+        id: drop_item_for_player
+      - args:
+          item: allium 1
+        id: drop_item_for_player
+      - args:
+          item: azure_bluet 1
+        id: drop_item_for_player
+      - args:
+          item: red_tulip 1
+        id: drop_item_for_player
+      - args:
+          item: orange_tulip 1
+        id: drop_item_for_player
+      - args:
+          item: white_tulip 1
+        id: drop_item_for_player
+      - args:
+          item: pink_tulip 1
+        id: drop_item_for_player
+      - args:
+          item: oxeye_daisy 1
+        id: drop_item_for_player
+      - args:
+          item: cornflower 1
+        id: drop_item_for_player
+      - args:
+          item: lily_of_the_valley 1
+        id: drop_item_for_player
+      - args:
+          item: sunflower 1
+        id: drop_item_for_player
+      - args:
+          item: lilac 1
+        id: drop_item_for_player
+      - args:
+          item: rose_bush 1
+        id: drop_item_for_player
+      - args:
+          item: peony 1
+        id: drop_item_for_player
+    chance: '%level% * 25'
+    run-type: random
+  id: run_chain_inline
+  filters:
+    player_placed: false
+    blocks:
+    - oak_leaves
+    - spruce_leaves
+    - birch_leaves
+    - jungle_leaves
+    - acacia_leaves
+    - dark_oak_leaves
+    - mangrove_leaves
+    - azalea_leaves
+    - flowering_azalea_leaves
+  triggers:
+  - mine_block
+display-name: '&#FF0000R&#FF7F00a&#FFFF00i&#00FF00n&#0000FFb&#4B0082o&#9400D3w'
+discoverable: true
+conditions: []

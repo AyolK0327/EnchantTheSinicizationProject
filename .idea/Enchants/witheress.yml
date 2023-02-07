@@ -1,0 +1,21 @@
+description: Gives &a%placeholder%%&r bonus damage against withers
+type: normal
+targets:
+- sword
+enchantable: false
+max-level: 5
+tradeable: false
+placeholder: '%level% * 10'
+effects:
+- args:
+    multiplier: 1 + 0.2 * %level%
+  id: damage_multiplier
+  filters:
+    entities:
+    - wither
+  triggers:
+  - melee_attack
+display-name: Witheress
+discoverable: true
+conditions: []
+rarity: epic

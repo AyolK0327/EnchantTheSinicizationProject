@@ -1,0 +1,25 @@
+display-name: "Précision"
+description: "&a+%placeholder%%&r dégâts avec un headshot."
+placeholder: "15 * %level%"
+type: normal
+
+targets:
+  - bow
+  - crossbow
+  - trident
+conflicts: [ ]
+rarity: rare
+max-level: 2
+
+tradeable: false
+discoverable: false
+enchantable: false
+
+effects:
+  - id: damage_multiplier
+    args:
+      multiplier: "1.5 * %level%"
+    triggers:
+      - headshot
+
+conditions: [ ]

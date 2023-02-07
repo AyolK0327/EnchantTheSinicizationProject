@@ -1,0 +1,27 @@
+display-name: "Sore Loser"
+description: "Death spawns a &alingering cloud of harming&r"
+type: normal
+
+targets:
+  - helmet
+  - chestplate
+  - leggings
+  - boots
+conflicts: [ ]
+rarity: epic
+max-level: 1
+
+tradeable: true
+discoverable: true
+enchantable: true
+
+effects:
+  - id: spawn_potion_cloud
+    args:
+      effect: harm
+      level: 2
+      duration: 200
+    triggers: 
+    - death
+      
+conditions: [ ]

@@ -1,0 +1,19 @@
+description: Gives a &a%placeholder%%&r bonus to attack speed while sprinting
+type: normal
+targets:
+- sword
+enchantable: true
+max-level: 3
+tradeable: true
+conflicts: []
+placeholder: 5 * %level%
+effects:
+- args:
+    multiplier: 1 + %level% * 0.05
+  id: attack_speed_multiplier
+  triggers: []
+display-name: Caffeinated
+discoverable: true
+conditions:
+- id: is_sprinting
+rarity: rare

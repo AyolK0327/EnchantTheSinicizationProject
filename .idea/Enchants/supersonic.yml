@@ -1,0 +1,25 @@
+description: Gain &aspeed %placeholder%&r when at low health
+type: special
+targets:
+- boots
+enchantable: false
+max-level: 2
+tradeable: false
+conflicts:
+- streamlining
+placeholder: '%level + 5%'
+effects:
+- args:
+    duration: 30
+    level: '%level + 5%'
+    effect: speed
+    apply_to_player: true
+  id: permanent_potion_effect
+  triggers: []
+display-name: Supersonic
+discoverable: true
+conditions:
+- args:
+    percent: 20
+  id: below_health_percent
+rarity: veryspecial

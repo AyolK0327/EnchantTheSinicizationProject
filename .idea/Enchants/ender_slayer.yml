@@ -1,0 +1,25 @@
+description: Gives a &a%placeholder%&r bonus to melee damage against end mobs
+type: normal
+targets:
+- sword
+- axe
+enchantable: true
+max-level: 6
+tradeable: true
+conflicts: []
+placeholder: 1 + 0.5 * %level%
+effects:
+- args:
+    damage: 1 + 0.5 * %level%
+  id: add_damage
+  filters:
+    entities:
+    - enderman
+    - endermite
+    - ender_dragon
+  triggers:
+  - melee_attack
+display-name: Ender Slayer
+discoverable: true
+conditions: []
+rarity: uncommon

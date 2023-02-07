@@ -1,0 +1,20 @@
+description: '&a%placeholder%%&r chance of striking powerful lightning on your opponent'
+type: special
+targets:
+- sword
+enchantable: true
+max-level: 4
+tradeable: true
+conflicts: []
+placeholder: 8 * %level%
+effects:
+- args:
+    amount: (%level% / 2)
+    chance: (8 * %level%)
+  id: strike_lightning
+  triggers:
+  - melee_attack
+display-name: Bolt
+discoverable: true
+conditions: []
+rarity: legendary

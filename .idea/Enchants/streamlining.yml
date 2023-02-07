@@ -1,0 +1,17 @@
+description: Gives a &a%placeholder%%&r boost to movement speed
+type: normal
+targets:
+- boots
+enchantable: true
+max-level: 4
+tradeable: true
+conflicts: []
+placeholder: '%level% * 5'
+effects:
+- args:
+    multiplier: 1 + %level% * 0.05
+  id: movement_speed_multiplier
+display-name: Streamlining
+discoverable: true
+conditions: []
+rarity: special

@@ -1,0 +1,27 @@
+description: Increases damage dealt in the nether by &a%placeholder%%
+type: normal
+targets:
+- sword
+- bow
+- trident
+enchantable: true
+max-level: 4
+tradeable: true
+conflicts:
+- end_affinity
+placeholder: 20 + %level% * 10
+effects:
+- args:
+    multiplier: 1.2 + %level% * 0.1
+  id: damage_multiplier
+  triggers:
+  - melee_attack
+  - bow_attack
+  - trident_attack
+display-name: Nether Affinity
+discoverable: true
+conditions:
+- args:
+    world: world_nether
+  id: in_world
+rarity: epic

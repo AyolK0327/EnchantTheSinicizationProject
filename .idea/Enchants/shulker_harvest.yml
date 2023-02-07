@@ -1,0 +1,22 @@
+description: Gives a &a%placeholder%%&r boost to shulker drops
+type: normal
+targets:
+- sword
+enchantable: true
+max-level: 3
+tradeable: true
+conflicts:
+- looting
+placeholder: ceil(((1 / (%level% + 4)) + ((%level% + 3) / 2)) * 100 - 100)
+effects:
+- args:
+    on_items:
+    - shulker_shell
+    fortune: 2 + %level%
+  id: multiply_drops
+  triggers:
+  - entity_item_drop
+display-name: Shulker Harvest
+discoverable: true
+conditions: []
+rarity: epic

@@ -1,0 +1,23 @@
+placeholders:
+  seconds: 2 + %level%
+  chance: 3 + 2 * %level%
+description: Gives a &a%chance%%&r chance to make your opponent feel as if they've
+  been frozen for &a%seconds%&r seconds
+type: normal
+targets:
+- bow
+enchantable: true
+max-level: 3
+tradeable: true
+conflicts: []
+effects:
+- args:
+    chance: 3 + 2 * %level%
+    ticks: 60 + 20 * %level%
+  id: set_freeze_ticks
+  triggers:
+  - bow_attack
+display-name: Frost
+discoverable: true
+conditions: []
+rarity: legendary

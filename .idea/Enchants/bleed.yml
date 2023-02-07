@@ -1,0 +1,23 @@
+description: Gives a &a%placeholder%%&r chance to cause your opponent to bleed, damaging
+  them repeatedly
+type: normal
+targets:
+- sword
+enchantable: true
+max-level: 7
+tradeable: true
+conflicts: []
+placeholder: 1.5 * %level%
+effects:
+- args:
+    damage: 1
+    amount: 2 * %level%
+    chance: 1.5 * %level%
+    interval: 15
+  id: bleed
+  triggers:
+  - melee_attack
+display-name: Bleed
+discoverable: true
+conditions: []
+rarity: legendary

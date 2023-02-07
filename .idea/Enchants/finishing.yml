@@ -1,0 +1,21 @@
+description: Increases damage dealt by &a%placeholder%%&r for each percent of health
+  missing on your opponent
+type: normal
+targets:
+- sword
+- axe
+enchantable: true
+max-level: 5
+tradeable: true
+conflicts: []
+placeholder: 0.2 * %level%
+effects:
+- args:
+    multiplier: 1 + ((1 - %victim_health% / %victim_max_health%) * 0.2 * %level%)
+  id: damage_multiplier
+  triggers:
+  - melee_attack
+display-name: Finishing
+discoverable: true
+conditions: []
+rarity: uncommon

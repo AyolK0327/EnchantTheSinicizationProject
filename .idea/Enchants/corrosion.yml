@@ -1,0 +1,27 @@
+display-name: "Corrosion"
+description: "&a+%placeholder% &rdégats à l'armure."
+placeholder: "%level%"
+type: normal
+
+targets:
+  - trident
+  - bow
+  - crossbow
+
+conflicts: [ ]
+rarity: legendary
+max-level: 1
+
+tradeable: false
+discoverable: false
+enchantable: false
+
+effects:
+  - id: damage_armor
+    args:
+      damage: "%level%"
+    triggers:
+      - bow_attack
+      - trident_attack
+
+conditions: [ ]

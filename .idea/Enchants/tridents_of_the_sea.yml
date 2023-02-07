@@ -1,0 +1,48 @@
+placeholders:
+  bonus: 30 * %level%
+description: Throw more tridents in a row at the same time.
+type: normal
+targets:
+- trident
+enchantable: true
+max-level: 3
+tradeable: false
+conflicts: []
+effects:
+- args:
+    chain:
+      effects:
+      - args:
+          inherit_velocity: true
+          repeat:
+            times: '%level%'
+            start: '3'
+            increment: '3'
+          projectile: trident
+        mutators:
+        - args:
+            angle: '%repeat_count% * 2'
+          id: spin_velocity
+        id: shoot
+      - args:
+          inherit_velocity: true
+          repeat:
+            times: '%level%'
+            start: '-3'
+            increment: '-3'
+          projectile: trident
+        mutators:
+        - args:
+            angle: '%repeat_count% * 2'
+          id: spin_velocity
+        id: shoot
+    send_cooldown_message: false
+    cooldown: 0.01
+    run-type: normal
+  id: run_chain_inline
+  triggers:
+  - projectile_launch
+display-name: Tridents of the Sea
+discoverable: true
+conditions: []
+rarity: legendary

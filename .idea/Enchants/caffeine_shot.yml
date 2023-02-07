@@ -1,0 +1,30 @@
+description: Give the victim &auncontrollable speed and jump boost&r
+type: special
+targets:
+- bow
+- crossbow
+enchantable: true
+max-level: 1
+tradeable: true
+conflicts: []
+effects:
+- args:
+    duration: 100
+    level: 20
+    effect: speed
+    apply-to-player: false
+  id: potion_effect
+  triggers:
+  - bow_attack
+- args:
+    duration: 100
+    level: 20
+    effect: jump
+    apply-to-player: false
+  id: potion_effect
+  triggers:
+  - bow_attack
+display-name: Caffeine Shot
+discoverable: true
+conditions: []
+rarity: veryspecial

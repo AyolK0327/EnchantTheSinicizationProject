@@ -1,0 +1,18 @@
+description: Decreases sprinting hunger loss by &a%placeholder%%
+type: normal
+targets:
+- chestplate
+enchantable: true
+max-level: 4
+tradeable: true
+conflicts: []
+placeholder: '%level% * 20'
+effects:
+- args:
+    multiplier: 1 - %level% * 0.2
+  id: hunger_multiplier
+display-name: Stamina
+discoverable: true
+conditions:
+- id: is_sprinting
+rarity: rare

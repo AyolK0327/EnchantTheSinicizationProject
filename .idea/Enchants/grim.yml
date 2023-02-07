@@ -1,0 +1,18 @@
+description: Buffs hoe damage greatly. Essential for combat hoe builds
+type: special
+targets:
+- hoe
+enchantable: false
+max-level: 2
+tradeable: true
+conflicts: []
+effects:
+- args:
+    multiplier: 7
+  id: damage_multiplier
+  triggers:
+  - melee_attack
+display-name: Grim
+discoverable: true
+conditions: []
+rarity: special

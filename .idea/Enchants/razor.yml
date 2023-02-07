@@ -1,0 +1,25 @@
+description: Massive extra damage &a+%placeholder%%
+type: special
+targets:
+- sword
+enchantable: true
+max-level: 8
+tradeable: true
+conflicts:
+- sharpness
+- smite
+- bane_of_arthropods
+- defusion
+- butchering
+- ender_slayer
+placeholder: 12 * %level%
+effects:
+- args:
+    multiplier: 1 + 0.12 * %level%
+  id: damage_multiplier
+  triggers:
+  - melee_attack
+display-name: Razor
+discoverable: true
+conditions: []
+rarity: legendary

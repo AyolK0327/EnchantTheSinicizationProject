@@ -1,0 +1,20 @@
+description: Gives a &a%placeholder%%&r boost to job experience
+type: normal
+targets:
+- armor
+enchantable: true
+max-level: 3
+tradeable: true
+conflicts: []
+placeholder: '%level% * 2'
+dependencies:
+- EcoJobs
+effects:
+- args:
+    multiplier: 1 + 0.02 * %level%
+  id: job_xp_multiplier
+display-name: Hard Worker
+discoverable: true
+dont-register: true
+conditions: []
+rarity: legendary

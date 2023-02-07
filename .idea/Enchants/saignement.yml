@@ -1,0 +1,29 @@
+display-name: "Saignement"
+description: "&a%chance%%&r chance d'infliger saignement &c10s"
+placeholders:
+  chance: "10 * %level%"
+type: normal
+
+targets:
+  - sword
+  - axe
+conflicts:
+  - poison
+rarity: legendary
+max-level: 3
+
+tradeable: false
+discoverable: false
+enchantable: false
+
+effects:
+  - id: bleed
+    args:
+      chance: "10 * %level%"
+      damage: 1.0
+      interval: 20
+      amount: 10
+    triggers:
+      - melee_attack
+
+conditions: [ ]

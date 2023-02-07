@@ -1,0 +1,26 @@
+display-name: "Déviation"
+description: "Renvoie &a%placeholder%%&r des dégâts à la cible."
+placeholder: "%level% * 15"
+type: normal
+
+targets:
+  - shield
+conflicts:
+  - regeneration
+rarity: epic
+max-level: 2
+
+tradeable: false
+discoverable: false
+enchantable: false
+
+effects:
+  - id: damage_victim
+    args:
+      damage: "%v% * (%level% * 0.15)"
+      use-source: false
+      cooldown: 2
+    triggers:
+      - shield_block
+
+conditions: [ ]

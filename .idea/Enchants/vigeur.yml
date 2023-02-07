@@ -1,0 +1,21 @@
+display-name: "Vigeur"
+description: "&a+2&r coeurs"
+placeholder: [ ]
+type: normal
+
+targets:
+  - chestplate
+conflicts: [ ]
+rarity: legendary
+max-level: 1
+
+tradeable: false
+discoverable: false
+enchantable: false
+
+effects:
+  - id: bonus_health
+    args:
+      health: 4
+
+conditions: [ ]

@@ -1,0 +1,23 @@
+description: Gain an immense damage boost at the cost of most of your health
+type: special
+targets:
+- chestplate
+- elytra
+enchantable: true
+max-level: 1
+tradeable: true
+conflicts: []
+effects:
+- args:
+    level: 3
+    effect: increase_damage
+  id: permanent_potion_effect
+  triggers: []
+- args:
+    health: -18
+  id: bonus_health
+  triggers: []
+display-name: Glass Cannon
+discoverable: true
+conditions: []
+rarity: special

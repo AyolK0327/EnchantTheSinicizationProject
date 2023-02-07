@@ -1,0 +1,23 @@
+description: Grants a burst of &aregeneration 2&r for &a%placeholder% ticks&r
+type: normal
+targets:
+- hoe
+enchantable: true
+max-level: 3
+tradeable: true
+conflicts: []
+placeholder: 300 * (200 + (%level% - 1))
+effects:
+- args:
+    duration: 300 * (200 + (%level% - 1))
+    level: 2
+    effect: regeneration
+    cooldown: 180
+    apply-to-player: true
+  id: potion_effect
+  triggers:
+  - alt_click
+display-name: kickstarter
+discoverable: true
+conditions: []
+rarity: epic

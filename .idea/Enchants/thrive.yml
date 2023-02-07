@@ -1,0 +1,17 @@
+description: Gives &a%placeholder%&r bonus health
+type: normal
+targets:
+- armor
+enchantable: true
+max-level: 2
+tradeable: true
+conflicts: []
+placeholder: '%level%'
+effects:
+- args:
+    health: '%level%'
+  id: bonus_health
+display-name: Thrive
+discoverable: true
+conditions: []
+rarity: legendary

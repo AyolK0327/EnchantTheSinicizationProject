@@ -1,0 +1,18 @@
+description: Verliere keine Luft unterwasser
+type: normal
+targets:
+- helmet
+enchantable: true
+max-level: 1
+tradeable: true
+conflicts: []
+placeholder: '%level% * 1'
+effects:
+- args:
+    level: 2022
+    effect: water_breathing
+  id: permanent_potion_effect
+display-name: Unter Wasser Atmung
+discoverable: true
+conditions: []
+rarity: common

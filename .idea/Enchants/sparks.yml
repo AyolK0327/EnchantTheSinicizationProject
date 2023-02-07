@@ -1,0 +1,41 @@
+placeholders:
+  damage: 1 + %level%
+  chance: 25 + 5 * %level%
+description: Hooking onto enemies during storms gives a &a%chance%%&r chance to strike
+  lightning dealing &a%damage%&r damage
+type: normal
+targets:
+- fishing_rod
+enchantable: true
+max-level: 5
+tradeable: true
+conflicts: []
+effects:
+- args:
+    chance: 25 + 5 * %level%
+  effects:
+  - args:
+      damage: 1 + 1 * %level%
+      silent: true
+    id: smite
+  - args:
+      particle-amount: 10
+      animation: ground_spiral
+      use-eye-location: false
+      particle: electric_spark
+      tick-multiplier: 1
+      particle_args:
+        duration: 25
+        scalar: 5.5
+        distance-scalar: 0.3
+      entity: victim
+    mutators:
+    - id: location_to_victim
+    id: particle_animation
+  triggers:
+  - catch_entity
+display-name: Sparks
+discoverable: true
+conditions:
+- id: is_storm
+rarity: rare

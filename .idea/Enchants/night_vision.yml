@@ -1,0 +1,18 @@
+description: Im Dunkeln sehen
+type: normal
+targets:
+- helmet
+enchantable: true
+max-level: 1
+tradeable: true
+conflicts: []
+placeholder: '%level% * 1'
+effects:
+- args:
+    level: 2022
+    effect: night_vision
+  id: permanent_potion_effect
+display-name: Nachtsicht
+discoverable: true
+conditions: []
+rarity: common

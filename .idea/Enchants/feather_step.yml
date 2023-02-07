@@ -1,0 +1,14 @@
+description: Prevents trampling crops by jumping on them
+type: normal
+targets:
+- boots
+enchantable: true
+max-level: 1
+tradeable: true
+conflicts: []
+effects:
+- id: feather_step
+display-name: Feather Step
+discoverable: true
+conditions: []
+rarity: legendary

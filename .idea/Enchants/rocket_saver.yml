@@ -1,0 +1,17 @@
+description: Gives a &a%placeholder%%&r chance to not consume fireworks when boosting
+type: normal
+targets:
+- elytra
+enchantable: true
+max-level: 3
+tradeable: true
+conflicts: []
+placeholder: '%level% * 20'
+effects:
+- args:
+    chance: '%level% * 20'
+  id: elytra_boost_save_chance
+display-name: Rocket Saver
+discoverable: true
+conditions: []
+rarity: rare

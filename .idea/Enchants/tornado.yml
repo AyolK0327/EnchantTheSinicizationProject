@@ -1,0 +1,22 @@
+description: Adds &a%placeholder%%&r vertical knockback to your weapon.
+type: normal
+targets:
+- sword
+enchantable: true
+max-level: 3
+tradeable: true
+conflicts: []
+placeholder: '%level% * 85'
+effects:
+- args:
+    duration: 2
+    level: '%level% * 20'
+    effect: levitation
+    apply_to_player: false
+  id: potion_effect
+  triggers:
+  - melee_attack
+display-name: Tornado
+discoverable: true
+conditions: []
+rarity: legendary

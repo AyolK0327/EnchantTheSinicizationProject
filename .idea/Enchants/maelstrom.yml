@@ -1,0 +1,18 @@
+description: Tridents with this enchant deal more damage when thrown
+type: normal
+targets:
+- trident
+enchantable: true
+max-level: 1
+tradeable: true
+conflicts: []
+effects:
+- args:
+    multiplier: 2.5
+  id: damage_multiplier
+  triggers:
+  - trident_attack
+display-name: Maelstrom
+discoverable: true
+conditions: []
+rarity: epic

@@ -1,0 +1,24 @@
+description: Adds a &a%placeholder%%&r chance to freeze your opponent in place
+type: special
+targets:
+- sword
+- axe
+enchantable: true
+max-level: 4
+tradeable: true
+conflicts: []
+placeholder: 10 + (5 * (%level% - 1))
+effects:
+- args:
+    duration: 100
+    chance: 10 + (5 * (%level% - 1))
+    level: 10
+    effect: slow
+    apply_to_player: false
+  id: potion_effect
+  triggers:
+  - melee_attack
+display-name: Frostbite
+discoverable: true
+conditions: []
+rarity: special

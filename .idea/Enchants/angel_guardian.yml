@@ -1,0 +1,44 @@
+display-name: "Angel guardian"
+description: "Probabilidad de evitar la muerte en un &a%placeholder%%"
+placeholder: "5"
+type: special
+
+targets:
+  - chestplate
+conflicts: []
+rarity: legendary
+max-level: 1
+
+tradeable: false
+discoverable: false
+enchantable: false
+
+effects:
+  - id: run_chain_inline
+    args:
+      chance: "100"
+      run-type: normal # Optional, sets how the chain is ran, see the 'configuring an effect' page
+      chain: # The chain to run
+        effects:
+          - id: cancel_event
+            args:
+          - id: particle_animation
+            args:
+              particle: soul # The particle to spawn (https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Particle.html)
+              particle-amount: 2 # The amount of particles to spawn on each point
+              animation: ground_spiral # The ID of the animation
+              tick-multiplier: 3 # (Optional) increases the speed of the animation by some multiplier
+              entity: player # (Optional) specifies the entity to have the animation activate around (player, victim, projectile)
+              use-eye-location: true # (Optional) Sets the entity location to be at eye level rather than ground level
+              particle_args: # Arguments for the animation
+                scalar: 1.618
+                distance-scalar: 1
+                duration: 20
+          - id: play_sound
+            args:
+              sound: ENTITY_WITHER_HURT # The sound to play (https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Sound.html)
+              pitch: 0.7 # The pitch of the sound (0.5 - 2)
+              volume: 10 # The volume of the sound
+    triggers:
+        - death
+conditions: []

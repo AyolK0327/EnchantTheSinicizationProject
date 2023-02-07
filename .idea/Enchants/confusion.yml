@@ -1,0 +1,19 @@
+description: Gives a &a%placeholder%% &rchance to shuffle your opponents hotbar
+type: special
+targets:
+- sword
+enchantable: true
+max-level: 4
+tradeable: true
+conflicts: []
+placeholder: 2 * %level%
+effects:
+- args:
+    chance: 2 * %level%
+  id: shuffle_hotbar
+  triggers:
+  - melee_attack
+display-name: Confusion
+discoverable: true
+conditions: []
+rarity: special

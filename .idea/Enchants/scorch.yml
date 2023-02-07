@@ -1,0 +1,20 @@
+description: Fire aspect for hoes
+type: normal
+targets:
+- hoe
+enchantable: false
+max-level: 2
+tradeable: true
+conflicts: []
+placeholder: '%level%'
+effects:
+- args:
+    damage_per_tick: 1
+    ticks: 80 * %level%
+  id: ignite
+  triggers:
+  - melee_attack
+display-name: Scorch
+discoverable: true
+conditions: []
+rarity: epic

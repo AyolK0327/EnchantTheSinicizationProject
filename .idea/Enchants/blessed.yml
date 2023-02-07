@@ -1,0 +1,25 @@
+description: '&a5% chance&r to gain &aregeneration 2&r when picking up XP Orbs'
+type: normal
+targets:
+- helmet
+- chestplate
+- leggings
+- boots
+enchantable: true
+max-level: 1
+tradeable: true
+conflicts: []
+effects:
+- args:
+    duration: 100
+    chance: 5
+    level: 2
+    effect: regeneration
+    apply-to-player: true
+  id: potion_effect
+  triggers:
+  - gain_xp
+display-name: Blessed
+discoverable: true
+conditions: []
+rarity: rare

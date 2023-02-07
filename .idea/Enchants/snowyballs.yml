@@ -1,0 +1,27 @@
+description: Chance for snowballs to spawn snow golems as guards
+type: normal
+targets:
+- armor
+enchantable: true
+max-level: 2
+tradeable: true
+conflicts: []
+placeholder: 10 * %level%
+effects:
+- args:
+    amount: 1
+    chance: 10 * %level%
+    health: 999
+    range: 1
+    ticks_to_live: 300 * %level%
+    entity: snowman
+  id: spawn_mobs
+  filters:
+    projectiles:
+    - snowball
+  triggers:
+  - projectile_hit
+display-name: Snowy Balls
+discoverable: true
+conditions: []
+rarity: uncommon

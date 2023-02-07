@@ -1,0 +1,32 @@
+description: Grants 5 seconds of strength 3
+type: spell
+targets:
+- axe
+enchantable: true
+max-level: 1
+tradeable: true
+conflicts: []
+effects:
+- args:
+    chain:
+      effects:
+      - args:
+          duration: 100
+          level: 3
+          effect: increase_damage
+          apply_to_player: true
+        id: potion_effect
+      - args:
+          volume: 10
+          sound: event_raid_horn
+          pitch: 1
+        id: play_sound
+    cooldown: 180
+    send_coodown_message: true
+  id: run_chain_inline
+  triggers:
+  - alt_click
+display-name: Battle Cry
+discoverable: false
+conditions: []
+rarity: legendary

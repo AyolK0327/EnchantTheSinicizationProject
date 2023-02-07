@@ -1,0 +1,19 @@
+description: Wearing elytras with this enchant gives you &aabsorption %placeholder%&r
+type: normal
+targets:
+- elytra
+enchantable: true
+max-level: 2
+tradeable: false
+conflicts: []
+placeholder: '%level%'
+effects:
+- args:
+    level: '%level%'
+    effect: absorption
+  id: permanent_potion_effect
+  triggers: []
+display-name: Sound Barrier
+discoverable: false
+conditions: []
+rarity: legendary

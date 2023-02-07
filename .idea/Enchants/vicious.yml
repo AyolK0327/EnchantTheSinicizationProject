@@ -1,0 +1,20 @@
+description: Gives &a+%placeholder%&r %ecoskills_ferocity_name%
+type: normal
+targets:
+- sword
+enchantable: true
+max-level: 3
+tradeable: true
+conflicts: []
+placeholder: 5 + 5 * %level%
+dependencies:
+- EcoSkills
+effects:
+- args:
+    stat: ferocity
+    amount: 5 + 5 * %level%
+  id: add_stat
+display-name: Vicious
+discoverable: true
+conditions: []
+rarity: legendary

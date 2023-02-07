@@ -1,0 +1,22 @@
+display-name: "Endurance"
+description: "Réduit la perte de faim en sprint de &a%placeholder%%"
+placeholder: "%level% * 30"
+type: normal
+
+targets:
+  - chestplate
+conflicts: [ ]
+rarity: rare
+max-level: 2
+
+tradeable: false
+discoverable: false
+enchantable: false
+
+effects:
+  - id: hunger_multiplier
+    args:
+      multiplier: "1 - %level% * 0.3"
+
+conditions:
+  - id: is_sprinting

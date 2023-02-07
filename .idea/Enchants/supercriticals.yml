@@ -1,0 +1,21 @@
+description: 2% Chance to increases Extreme criticals damage
+type: legendary
+targets:
+- sword
+- axe
+enchantable: true
+max-level: 3
+tradeable: true
+conflicts: []
+placeholder: 10 * %level%
+effects:
+- args:
+    chance: 2
+    multiplier: 4 + 0.1 * %level%
+  id: crit_multiplier
+  triggers:
+  - melee_attack
+display-name: Super Criticals
+discoverable: true
+conditions: []
+rarity: legendary

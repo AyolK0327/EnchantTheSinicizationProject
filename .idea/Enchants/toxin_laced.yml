@@ -1,0 +1,30 @@
+display-name: "Toxin Laced"
+description: "&a25%&r chance to poison your attacker"
+type: normal
+
+targets:
+  - helmet
+  - chestplate
+  - leggings
+  - boots
+conflicts: 
+  - incandescence
+rarity: rare
+max-level: 1
+
+tradeable: true
+discoverable: true
+enchantable: true
+
+effects:
+  - id: potion_effect
+    args:
+      effect: poison
+      level: 2
+      duration: 100
+      apply_to_player: false
+      chance: 25
+    triggers:
+    - take_entity_damage
+      
+conditions: [ ]

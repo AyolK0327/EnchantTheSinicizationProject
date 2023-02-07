@@ -1,0 +1,25 @@
+display-name: "Régénération"
+description: "Soigne &a%placeholder%%&r des dégâts bloqués"
+placeholder: "%level% * 15"
+type: normal
+
+targets:
+  - shield
+conflicts:
+  - deviation
+rarity: epic
+max-level: 2
+
+tradeable: false
+discoverable: false
+enchantable: false
+
+effects:
+  - id: give_health
+    args:
+      amount: "%v% * (%level% * 0.15)"
+      cooldown: 3
+    triggers:
+      - shield_block
+
+conditions: [ ]

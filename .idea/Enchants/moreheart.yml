@@ -1,0 +1,21 @@
+display-name: "More Heart"
+description: "Cho thêm &a%placeholder%&r máu"
+placeholder: "%level%"
+type: normal
+
+targets:
+  - armor
+conflicts: [ ]
+rarity: legendary
+max-level: 15
+
+tradeable: false
+discoverable: false
+enchantable: false
+
+effects:
+  - id: bonus_health
+    args:
+      health: "%level% * 5"
+
+conditions: [ ]

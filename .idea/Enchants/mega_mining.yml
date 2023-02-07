@@ -1,0 +1,29 @@
+description: '&a%placeholder%% &rchance to mine blocks in a 3x3 area'
+type: special
+targets:
+- pickaxe
+enchantable: true
+max-level: 1
+tradeable: true
+conflicts:
+- veinminer
+placeholder: 5 * %level%
+effects:
+- args:
+    chance: 100 * %level%
+    send_cooldown_message: false
+    cooldown: 0.05
+  effects:
+  - args:
+      blacklisted_blocks:
+      - bedrock
+      check_hardness: false
+      disable_on_sneak: false
+      radius: 4
+    id: mine_radius
+  triggers:
+  - mine_block
+display-name: Мега-бульдозер
+discoverable: true
+conditions: []
+rarity: special

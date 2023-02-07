@@ -1,0 +1,30 @@
+description: While at half a heart, gain &aregeneration 10&r for a second
+type: special
+targets:
+- sword
+- axe
+- bow
+- crossbow
+- trident
+- hoe
+enchantable: true
+max-level: 1
+tradeable: true
+conflicts: []
+effects:
+- args:
+    duration: 20
+    level: 10
+    effect: regeneration
+    cooldown: 180
+    apply-to-player: true
+  id: potion_effect
+  triggers:
+  - take_damage
+display-name: Second Chance
+discoverable: true
+conditions:
+- args:
+    percent: 6
+  id: below_health_percent
+rarity: veryspecial

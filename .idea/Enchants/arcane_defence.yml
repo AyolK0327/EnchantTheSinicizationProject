@@ -1,0 +1,23 @@
+description: Gives a &a%placeholder%%&r chance to ignore potion damage
+type: normal
+targets:
+- armor
+enchantable: true
+max-level: 5
+tradeable: true
+conflicts: []
+placeholder: '%level% * 4'
+effects:
+- args:
+    chance: '%level% * 4'
+  id: cancel_event
+  filters:
+    damageCause:
+    - poison
+    - magic
+  triggers:
+  - take_damage
+display-name: Arcane Defence
+discoverable: true
+conditions: []
+rarity: epic

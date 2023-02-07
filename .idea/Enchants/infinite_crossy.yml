@@ -1,0 +1,23 @@
+description: Get a new arrow every time you hit something
+type: normal
+targets:
+- crossbow
+enchantable: true
+max-level: 1
+tradeable: true
+conflicts: []
+placeholder: '%level%'
+filters:
+  projectiles:
+  - arrow
+effects:
+- args:
+    item: arrow
+    chance: 100
+  id: give_item
+  triggers:
+  - projectile_hit
+display-name: Infinite Crossy
+discoverable: true
+conditions: []
+rarity: common

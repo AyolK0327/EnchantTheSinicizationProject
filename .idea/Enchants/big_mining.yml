@@ -1,0 +1,27 @@
+description: Deals &a%placeholder% &rdamage to your opponents armor
+type: normal
+targets:
+- pickaxe
+enchantable: false
+max-level: 1
+tradeable: false
+conflicts: []
+placeholder: '%level%'
+effects:
+- effects:
+  - args:
+      prevent_trigger: false
+    id: break_block
+  - args:
+      amount: 1
+    id: consume_held_item
+  - id: cancel_event
+  filters:
+    blocks:
+    - bedrock
+  triggers:
+  - mine_block_progress
+display-name: Мощный удар
+discoverable: false
+conditions: []
+rarity: legendary

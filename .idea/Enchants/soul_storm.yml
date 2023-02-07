@@ -1,0 +1,43 @@
+placeholders:
+  seconds: 15 + 5 * %level%
+  bonus: 150 + 50 * %level%
+description: Gives a &a%bonus%%&r bonus to attack damage for &a%seconds%&r seconds
+  at the expense of &a3&r hearts
+type: spell
+targets:
+- sword
+enchantable: true
+max-level: 2
+tradeable: true
+conflicts: []
+effects:
+- args:
+    cooldown: 180
+    send_cooldown_message: true
+  effects:
+  - args:
+      duration: (15 + 5 * %level%) * 20
+      effects:
+      - args:
+          multiplier: 1.5 + 0.5 * %level%
+        id: damage_multiplier
+        triggers:
+        - bow_attack
+        - melee_attack
+        - trident_attack
+      - args:
+          health: -6
+        id: bonus_health
+      conditions: []
+    id: add_holder
+  - args:
+      volume: 1
+      sound: entity_ghast_scream
+      pitch: 0.7
+    id: play_sound
+  triggers:
+  - alt_click
+display-name: Soul Storm
+discoverable: true
+conditions: []
+rarity: legendary

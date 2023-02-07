@@ -1,0 +1,26 @@
+placeholders:
+  seconds: 0.5 + floor(%level% / 4)
+  chance: 2 * %level%
+description: Gives a &a%chance%%&r chance to disappear for &a%seconds%&r seconds after
+  taking damage
+type: normal
+targets:
+- armor
+enchantable: true
+max-level: 2
+tradeable: true
+conflicts: []
+effects:
+- args:
+    duration: 10 + floor(%level% * 5)
+    chance: '%level% * 2'
+    level: 2
+    effect: invisibility
+    apply-to-player: true
+  id: potion_effect
+  triggers:
+  - take_entity_damage
+display-name: Vanish
+discoverable: true
+conditions: []
+rarity: rare

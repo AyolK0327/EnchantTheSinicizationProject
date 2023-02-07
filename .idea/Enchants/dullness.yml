@@ -1,0 +1,23 @@
+description: Deal &c%placeholder% &rless damage with this weapon
+type: curse
+targets:
+- sword
+- axe
+enchantable: true
+max-level: 5
+tradeable: true
+conflicts:
+- sharpness
+- smite
+- bane_of_arthropods
+placeholder: 1 + 0.5 * %level%
+effects:
+- args:
+    damage: -(1 + 0.5 * %level%)
+  id: add_damage
+  triggers:
+  - melee_attack
+display-name: Dullness
+discoverable: true
+conditions: []
+rarity: rare

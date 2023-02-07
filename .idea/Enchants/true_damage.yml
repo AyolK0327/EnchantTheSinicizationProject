@@ -1,0 +1,22 @@
+description: Adds &f✤ &a+%placeholder%&f True Damage &8on hit.
+type: normal
+targets:
+- sword
+- axe
+enchantable: true
+max-level: 4
+tradeable: true
+conflicts: []
+placeholder: '%level% * 0.75'
+effects:
+- args:
+    damage: 0.75 * %level%
+    true-damage: true
+    use-source: true
+  id: damage_victim
+  triggers:
+  - melee_attack
+display-name: True Damage
+discoverable: true
+conditions: []
+rarity: legendary

@@ -1,0 +1,26 @@
+display-name: "Parasite"
+description: "Soigne &a%placeholder%%&r des dégâts infligés."
+placeholder: "%level% * 10"
+type: normal
+
+targets:
+  - trident
+  - bow
+  - crossbow
+conflicts: []
+rarity: rare
+max-level: 3
+
+tradeable: false
+discoverable: false
+enchantable: false
+
+effects:
+  - id: give_health
+    args:
+      amount: "%v% * (%level% * 0.1)"
+    triggers:
+      - bow_attack
+      - trident_attack
+
+conditions: [ ]

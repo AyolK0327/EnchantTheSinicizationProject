@@ -1,0 +1,20 @@
+description: Bring down &afive&r bolts of lightning on the block or are looking at
+type: spell
+targets:
+- trident
+enchantable: true
+max-level: 2
+tradeable: true
+conflicts:
+- channeling
+effects:
+- args:
+    cooldown: 180
+    amount: 5
+  id: strike_lightning
+  triggers:
+  - alt_click
+display-name: Storm Surge
+discoverable: true
+conditions: []
+rarity: legendary

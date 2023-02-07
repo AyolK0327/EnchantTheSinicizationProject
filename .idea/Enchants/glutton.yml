@@ -1,0 +1,18 @@
+description: You no longer need to eat
+type: special
+targets:
+- healmet
+enchantable: false
+max-level: 1
+tradeable: true
+conflicts: []
+effects:
+- args:
+    level: 1
+    effect: saturation
+  id: permanent_potion_effect
+  triggers: []
+display-name: Glutton
+discoverable: true
+conditions: []
+rarity: veryspecial

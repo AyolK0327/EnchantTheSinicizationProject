@@ -1,0 +1,30 @@
+description: Puts you back on max health
+type: spell
+targets:
+- sword
+- axe
+- pickaxe
+- shovel
+enchantable: true
+max-level: 1
+tradeable: true
+conflicts: []
+effects:
+- args:
+    cooldown: 450
+    send_cooldown_message: true
+  effects:
+  - args:
+      amount: 1000
+    id: give_health
+  - args:
+      volume: 1
+      sound: entity_player_levelup
+      pitch: 1
+    id: play_sound
+  triggers:
+  - alt_click
+display-name: Vitality
+discoverable: true
+conditions: []
+rarity: special

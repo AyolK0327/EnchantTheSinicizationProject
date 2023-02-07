@@ -1,0 +1,63 @@
+display-name: "Thanos"
+description: "The power of all 6 infinity stones"
+placeholder: "%level%"
+type: normal
+
+targets:
+  - helmet
+  - player_head
+conflicts: [ ]
+rarity: rare
+max-level: 6
+
+tradeable: true
+discoverable: true
+enchantable: true
+
+effects:
+  - id: potion_effect
+    args:
+          effect: absorption
+          level: 20
+          duration: 1800
+          apply_to_player: true
+
+  - id: potion_effect
+    args:
+          effect: hero_of_the_village
+          level: 3
+          duration: 1800
+          apply_to_player: true
+
+  - id: potion_effect
+    args:
+          effect: regeneration
+          level: 3
+          duration: 1800
+          apply_to_player: true
+
+  - id: potion_effect
+    args:
+          effect: resistance
+          level: 4
+          duration: 1800
+          apply_to_player: true
+
+  - id: potion_effect
+    args:
+          effect: speed
+          level: 3
+          duration: 1800
+          apply_to_player: true
+
+  - id: potion_effect
+    args:
+          effect: jump
+          level: 4
+          duration: 1800
+          apply_to_player: true
+
+    triggers:
+      - swap_hands
+
+conditions: [ ]

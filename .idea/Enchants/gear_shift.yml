@@ -1,0 +1,32 @@
+description: Successfully blocking a hit grants you speed 2 and your attacker slowness
+  2 for 5 seconds
+type: normal
+targets:
+- shield
+enchantable: true
+max-level: 1
+tradeable: true
+conflicts: []
+effects:
+- args:
+    duration: 100
+    level: 2
+    effect: speed
+    cooldown: 10
+    apply-to-player: true
+  id: potion_effect
+  triggers:
+  - shield_block
+- args:
+    duration: 100
+    level: 2
+    effect: slow
+    cooldown: 10
+    apply-to-player: false
+  id: potion_effect
+  triggers:
+  - shield_block
+display-name: Gear Shift
+discoverable: true
+conditions: []
+rarity: epic

@@ -1,0 +1,21 @@
+description: Cleanse yourself of bad effects
+type: normal
+targets:
+- sword
+enchantable: true
+max-level: 1
+tradeable: true
+conflicts:
+- vitalize
+- salvation
+effects:
+- args:
+    cooldown: 300
+    chain: salvation_chain
+  id: run_chain
+  triggers:
+  - alt_click
+display-name: Salvation
+discoverable: false
+conditions: []
+rarity: epic

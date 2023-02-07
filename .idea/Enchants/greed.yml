@@ -1,0 +1,54 @@
+placeholders:
+  damage: '%level% / 2'
+description: '&8Apartir de las 10K monedas causas &a%damage%&r de daño por cada 10K
+  y consumes 50$'
+type: legendary
+targets:
+- sword
+enchantable: true
+max-level: 5
+tradeable: true
+conflicts:
+- backstab
+effects:
+- args:
+    damage: '%level% / 2 * ( %vault_eco_balance% / 10000)'
+  id: add_damage
+  triggers:
+  - melee_attack
+- args:
+    volume: 10
+    sound: BLOCK_NETHER_GOLD_ORE_BREAK
+    pitch: 0.5
+  id: play_sound
+  triggers:
+  - melee_attack
+- args:
+    command: eco take %player% 50
+  id: run_command
+  triggers:
+  - melee_attack
+- args:
+    particle-amount: 8
+    animation: helix
+    use-eye-location: true
+    particle: electric_spark
+    tick-multiplier: 1
+    particle_args:
+      duration: 20
+      scalar: 1.618
+      distance-scalar: 0.5
+    entity: victim
+  id: particle_animation
+  triggers:
+  - melee_attack
+display-name: Codicia
+discoverable: true
+conditions:
+- args:
+    not-met-lines:
+    - ''
+    - <font:faith:default><red>Necesitas mas de 10K monedas para usar <gradient:aqua:white>Codicia
+    balance: 10000
+  id: above_balance
+rarity: legendary

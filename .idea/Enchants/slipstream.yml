@@ -1,0 +1,17 @@
+description: Gives a &a%placeholder%%&r boost to movement speed while holding
+type: normal
+targets:
+- trident
+enchantable: true
+max-level: 3
+tradeable: true
+conflicts: []
+placeholder: '%level% * 8'
+effects:
+- args:
+    multiplier: 1 + %level% * 0.08
+  id: movement_speed_multiplier
+display-name: Slipstream
+discoverable: true
+conditions: []
+rarity: epic

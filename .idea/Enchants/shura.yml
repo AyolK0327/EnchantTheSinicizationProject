@@ -1,0 +1,22 @@
+description: Gives a &a%placeholder%x&r bonus to critical damage when under half health
+type: normal
+targets:
+- axe
+enchantable: true
+max-level: 2
+tradeable: true
+conflicts: []
+placeholder: 1 + 0.25 * %level%
+effects:
+- args:
+    multiplier: 1 + 0.25 * %level%
+  id: crit_multiplier
+  triggers:
+  - melee_attack
+display-name: Shura
+discoverable: true
+conditions:
+- args:
+    percent: 51
+  id: below_health_percent
+rarity: rare

@@ -1,0 +1,28 @@
+description: Teleports you &a%placeholder%&8 blocks forward
+type: spell
+targets:
+- sword
+enchantable: true
+max-level: 2
+tradeable: true
+conflicts: []
+placeholder: 3 + %level% * 2
+effects:
+- args:
+    cooldown: 90
+    send_cooldown_message: true
+  effects:
+  - args:
+      distance: 3 + %level% * 2
+    id: transmission
+  - args:
+      volume: 1
+      sound: entity_enderman_teleport
+      pitch: 1.2
+    id: play_sound
+  triggers:
+  - alt_click
+display-name: Transmission
+discoverable: true
+conditions: []
+rarity: legendary

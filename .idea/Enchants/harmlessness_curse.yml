@@ -1,0 +1,20 @@
+description: Gives a &a%placeholder%% &rchance for attacks to do nothing
+type: curse
+targets:
+- sword
+- axe
+enchantable: false
+max-level: 1
+tradeable: true
+conflicts: []
+placeholder: 15 * %level%
+effects:
+- args:
+    chance: 15 * %level%
+  id: cancel_event
+  triggers:
+  - melee_attack
+display-name: Curse of Harmlessness
+discoverable: true
+conditions: []
+rarity: legendary

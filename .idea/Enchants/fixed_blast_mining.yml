@@ -1,0 +1,39 @@
+description: '&a%placeholder%% &rchance to mine stone type blocks in a 3x3 area'
+type: special
+targets:
+- pickaxe
+enchantable: true
+max-level: 3
+tradeable: true
+conflicts:
+- veinminer
+placeholder: 5 * %level%
+effects:
+- args:
+    chance: 5 * %level%
+    send_cooldown_message: false
+    cooldown: 0.05
+  effects:
+  - args:
+      amount: 1
+      power: 0
+    id: create_explosion
+  - args:
+      blacklisted_blocks:
+      - bedrock
+      - obsidian
+      - crying_obsidian
+      - chest
+      - barrel
+      - barrier
+      - reinforced_deepslate
+      check_hardness: true
+      disable_on_sneak: true
+      radius: 1
+    id: mine_radius
+  triggers:
+  - mine_block
+display-name: Blast Mining
+discoverable: true
+conditions: []
+rarity: special

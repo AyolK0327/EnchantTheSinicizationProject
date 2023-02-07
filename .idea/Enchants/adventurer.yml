@@ -1,0 +1,22 @@
+description: Gives a &a%placeholder%%&r boost to Adventurer experience
+type: normal
+targets:
+- boots
+enchantable: true
+max-level: 6
+tradeable: true
+conflicts:
+- enriched_plating
+placeholder: 2 * %level%
+dependencies:
+- EcoSkills
+effects:
+- args:
+    skills:
+    - exploration
+    multiplier: 1 + 0.02 * %level%
+  id: skill_xp_multiplier
+display-name: Adventurer
+discoverable: true
+conditions: []
+rarity: uncommon

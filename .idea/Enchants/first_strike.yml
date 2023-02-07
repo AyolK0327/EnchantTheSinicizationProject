@@ -1,0 +1,22 @@
+description: Deal &a%placeholder%% &rmore damage against victims on max health
+type: normal
+targets:
+- sword
+- axe
+enchantable: true
+max-level: 5
+tradeable: true
+conflicts: []
+placeholder: 30 + 20 * %level%
+effects:
+- args:
+    multiplier: 1.3 + 0.2 * %level%
+  id: damage_multiplier
+  filters:
+    on_max_health: true
+  triggers:
+  - melee_attack
+display-name: First Strike
+discoverable: true
+conditions: []
+rarity: uncommon

@@ -1,0 +1,26 @@
+placeholders:
+  limit: 4 + %level%
+  seconds: 0.5 * %level%
+description: Poisons attackers for &a%seconds%&r seconds for each heart of damage
+  dealt, up to &a%limit%&r seconds
+type: normal
+targets:
+- leggings
+enchantable: true
+max-level: 2
+tradeable: true
+conflicts:
+- thorns
+effects:
+- args:
+    duration: min(10 * %level% * %v% / 2, 80 + %level% * 20 * %v% / 2)
+    level: 1
+    effect: poison
+    apply_to_player: false
+  id: potion_effect
+  triggers:
+  - take_entity_damage
+display-name: Poison Ivy
+discoverable: true
+conditions: []
+rarity: epic

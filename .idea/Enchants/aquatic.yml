@@ -1,0 +1,23 @@
+display-name: "Aquatic"
+description: "Trident deals &a%placeholder%% &8additional damage when shot from water"
+placeholder: "5 * %level%"
+type: normal
+
+targets:
+  - trident
+conflicts: [ ]
+rarity: rare
+max-level: 8
+
+tradeable: false
+discoverable: false
+enchantable: false
+
+effects:
+  - id: damage_multiplier
+    args:
+      multiplier: "1 + 0.05 * %level%"
+    triggers:
+      - trident_attack
+conditions:
+  - id: in_water

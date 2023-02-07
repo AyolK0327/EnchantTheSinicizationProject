@@ -1,0 +1,21 @@
+description: Gain a &a%placeholder%%&r bonus to movement speed below &a20%&r health
+type: normal
+targets:
+- boots
+enchantable: true
+max-level: 2
+tradeable: true
+conflicts: []
+placeholder: 10 * %level%
+effects:
+- args:
+    multiplier: 1 + 0.1 * %level%
+  id: movement_speed_multiplier
+  triggers: []
+display-name: Getaway
+discoverable: true
+conditions:
+- args:
+    percent: 20
+  id: below_health_percent
+rarity: rare

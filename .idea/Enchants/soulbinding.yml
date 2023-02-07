@@ -1,0 +1,26 @@
+description: Halves your %ecoskills_strength_name%&r, but increases the sword damage
+  by &a+%placeholder%%
+type: special
+targets:
+- sword
+enchantable: false
+max-level: 1
+tradeable: true
+conflicts: []
+placeholder: 50 + 1 * %ecoskills_strength_base%
+dependencies:
+- EcoSkills
+effects:
+- args:
+    stat: strength
+    amount: -0.5 * %ecoskills_strength_base%
+  id: add_stat
+- args:
+    multiplier: 1.5 + 0.01 * %ecoskills_strength_base%
+  id: damage_multiplier
+  triggers:
+  - melee_attack
+display-name: Soulbinding
+discoverable: false
+conditions: []
+rarity: veryrare

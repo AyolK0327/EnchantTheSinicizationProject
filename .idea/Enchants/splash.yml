@@ -1,0 +1,45 @@
+placeholders:
+  damage: '%level% * 3'
+  radius: 2 * %level%
+description: Damage with &a%damage%&r of damage to entities in &a%radius%&r blocks
+  of radius where trident lands.
+type: normal
+targets:
+- trident
+enchantable: true
+max-level: 2
+tradeable: true
+conflicts:
+- wisdom
+spanish: Daña a las entidades cercanas a donde aterriza el tridente, pero no pierde
+  experiencia.
+effects:
+- args:
+    particle-amount: 6
+    animation: double_helix
+    delay: 1
+    particle: soul
+    tick-multiplier: 1
+    particle_args:
+      duration: 20
+      radius: 2 * %level%
+      speed: 2.0
+      height: 0.1
+    entity: projectile
+  id: particle_animation
+  triggers:
+  - projectile_hit
+  - trident_attack
+- args:
+    damage: '%level% * 3'
+    damage_as_player: false
+    damage_self: false
+    radius: 2 * %level%
+  id: damage_nearby_entities
+  triggers:
+  - projectile_hit
+  - trident_attack
+display-name: Splash
+discoverable: true
+conditions: []
+rarity: uncommon

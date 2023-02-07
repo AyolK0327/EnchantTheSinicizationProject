@@ -1,0 +1,23 @@
+description: Gain a short burst of speed &a%placeholder%%&r after taking damage
+type: normal
+targets:
+- boots
+enchantable: true
+max-level: 2
+tradeable: true
+conflicts:
+- streamlining
+placeholder: '%level%'
+effects:
+- args:
+    duration: 30
+    level: '%level%'
+    effect: speed
+    apply_to_player: true
+  id: potion_effect
+  triggers:
+  - take_entity_damage
+display-name: Escape
+discoverable: true
+conditions: []
+rarity: epic

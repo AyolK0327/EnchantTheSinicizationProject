@@ -1,0 +1,33 @@
+description: '&a%placeholder%% chance&r to gain Bad Omen by killing any Illager'
+type: normal
+targets:
+- sword
+- axe
+- bow
+- crossbow
+- trident
+- hoe
+enchantable: true
+max-level: 3
+tradeable: true
+conflicts: []
+placeholder: 25 * %level%
+effects:
+- args:
+    duration: 99999999
+    chance: 25 * %level%
+    level: 1
+    effect: bad_omen
+    apply-to-player: true
+  id: potion_effect
+  filters:
+    entities:
+    - evoker
+    - pillager
+    - vindicator
+  triggers:
+  - kill
+display-name: Rue
+discoverable: true
+conditions: []
+rarity: rare

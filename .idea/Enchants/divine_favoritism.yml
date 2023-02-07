@@ -1,0 +1,24 @@
+description: Getting hit has a &a20% chance&r to strike lightning on your aggressor
+mutators:
+- id: location-to-victim
+type: normal
+targets:
+- helmet
+- chestplate
+- leggings
+- boots
+enchantable: true
+max-level: 1
+tradeable: true
+conflicts: []
+effects:
+- args:
+    amount: 1
+    chance: 20
+  id: strike_lightning
+  triggers:
+  - take_entity_damage
+display-name: Divine Favoritism
+discoverable: true
+conditions: []
+rarity: legendary

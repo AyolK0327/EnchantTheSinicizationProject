@@ -1,0 +1,45 @@
+placeholders:
+  damage: '%level% * 2'
+description: Gives a &a%placeholder%%&r and a &a+%damage%&r bonus to damage
+type: normal
+targets:
+- hoe
+enchantable: true
+max-level: 4
+tradeable: true
+conflicts:
+- sharpness
+placeholder: '%level% * 2'
+effects:
+- args:
+    prevent_trigger: true
+    blocks:
+    - potato
+    - carrot
+    - beetroot_seeds
+    - melon_seeds
+    - melon
+    - pumpkin_seeds
+    - pumpkin
+    - wheat_seeds
+    - wheat
+    limit: 4
+    disable_on_sneak: true
+  filters:
+    blocks:
+    - potato
+    - carrot
+    - beetroot_seeds
+    - melon_seeds
+    - melon
+    - pumpkin_seeds
+    - pumpkin
+    - wheat_seeds
+    - wheat
+  id: mine_vein
+  triggers:
+  - alt_click
+display-name: Replenish
+discoverable: true
+conditions: []
+rarity: common

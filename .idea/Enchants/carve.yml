@@ -1,0 +1,25 @@
+placeholders:
+  damage: '%level% * 2'
+  radius: 1 + %level%
+description: Give &a%damage%&r damage to entities within &a%radius%&r blocks when
+  you swing
+type: normal
+targets:
+- axe
+enchantable: true
+max-level: 4
+tradeable: true
+conflicts: []
+effects:
+- args:
+    damage: '%level% * 2'
+    damage_as_player: true
+    damage_self: false
+    radius: 0.5 * %level%
+  id: damage_nearby_entities
+  triggers:
+  - melee_attack
+display-name: Carve
+discoverable: true
+conditions: []
+rarity: legendary

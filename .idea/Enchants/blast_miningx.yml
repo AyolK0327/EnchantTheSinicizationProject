@@ -1,0 +1,36 @@
+display-name: "<gradient:#00B4DB:#0083B0>Explosión minera"
+description: "Te da &a%placeholder%% &rde probabilidad de minar en 5x5"
+placeholder: "5 * %level%"
+type: special
+
+targets:
+  - pickaxe
+conflicts:
+  - veinminer
+rarity: special
+max-level: 3
+
+tradeable: false
+discoverable: true
+enchantable: false
+
+effects:
+  - effects:
+      - id: create_explosion
+        args:
+          power: 0
+          amount: 1
+      - id: mine_radius
+        args:
+          radius: 2
+          blacklisted_blocks: [ ]
+          check_hardness: true
+          disable_on_sneak: true
+    args:
+      chance: "5 * %level%"
+      cooldown: 0.05
+      send_cooldown_message: false
+    triggers:
+      - mine_block
+
+conditions: [ ]

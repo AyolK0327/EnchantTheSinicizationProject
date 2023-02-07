@@ -1,0 +1,35 @@
+display-name: "Взрывная Лопата"
+
+placeholder: "20 * %level%"
+type: special
+
+targets:
+  - shovel
+conflicts:
+  - excavation
+rarity: special
+max-level: 5
+
+tradeable: true
+discoverable: true
+enchantable: true
+
+effects:
+  - effects:
+      - id: create_explosion
+        args:
+          power: 0
+          amount: 1
+      - id: mine_radius
+        args:
+          radius: 1
+          blacklisted_blocks: [bedrock]
+          check_hardness: true
+          disable_on_sneak: true
+    args:
+      chance: "20 * %level%"
+      send_cooldown_message: false
+    triggers:
+      - mine_block
+
+conditions: [ ]

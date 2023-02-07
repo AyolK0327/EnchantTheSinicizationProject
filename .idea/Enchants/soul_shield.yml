@@ -1,0 +1,48 @@
+description: Activating this spell grants you Resistance 3 at the cost of three hearts
+  for 30 seconds
+type: spell
+targets:
+- sword
+enchantable: true
+max-level: 1
+tradeable: true
+conflicts: []
+effects:
+- args:
+    chain:
+      effects:
+      - args:
+          duration: 600
+          level: 3
+          effect: damage_resistance
+          apply-to-player: true
+        id: potion_effect
+      - args:
+          command: minecraft:attribute @s minecraft:generic.max_health base set 14
+          as-op: true
+        id: run_player_command
+      - args:
+          volume: 10
+          sound: entity_evoker_fangs_attack
+          pitch: 0.5
+        id: play_sound
+      - args:
+          delay: 600
+          as-op: true
+          command: minecraft:attribute @s minecraft:generic.max_health base set 20
+        id: run_player_command
+      - args:
+          volume: 10
+          delay: 600
+          sound: entity_zombie_converted_to_drowned
+          pitch: 1
+        id: play_sound
+    send_cooldown_message: true
+    cooldown: 180
+  id: run_chain_inline
+  triggers:
+  - alt_click
+display-name: Soul Shield
+discoverable: false
+conditions: []
+rarity: legendary

@@ -1,0 +1,27 @@
+description: Deal &a%placeholder%% &rmore against slimes and magma cubes
+type: normal
+targets:
+- sword
+- axe
+- bow
+- crossbow
+enchantable: true
+max-level: 7
+tradeable: true
+conflicts: []
+placeholder: 5 * %level%
+effects:
+- args:
+    multiplier: 1 + 0.05 * %level%
+  id: damage_multiplier
+  filters:
+    entities:
+    - slime
+    - magma_cube
+  triggers:
+  - melee_attack
+  - bow_attack
+display-name: Cubism
+discoverable: true
+conditions: []
+rarity: rare

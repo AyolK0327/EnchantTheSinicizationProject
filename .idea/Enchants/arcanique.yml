@@ -1,0 +1,27 @@
+display-name: "Arcanique"
+description: "&a%placeholder%%&r chance d'ignorer les dégats de potion."
+placeholder: "%level% * 15"
+type: normal
+
+targets:
+  - armor
+conflicts: [ ]
+rarity: epic
+max-level: 2
+
+tradeable: false
+discoverable: false
+enchantable: false
+
+effects:
+  - id: cancel_event
+    args:
+      chance: "%level% * 15"
+    triggers:
+      - take_damage
+    filters:
+      damageCause:
+        - poison
+        - magic
+
+conditions: [ ]

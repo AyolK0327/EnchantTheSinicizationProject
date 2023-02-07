@@ -1,0 +1,29 @@
+display-name: "Optique"
+description: "&a+%damage%%&r dégâts avec &a%blocks%&r blocs de distance."
+placeholders:
+  damage: "6 * %level%"
+  blocks: "22 - ceil(%level% / 0.5)"
+type: normal
+
+targets:
+  - bow
+  - crossbow
+  - trident
+conflicts:
+  - precision
+rarity: epic
+max-level: 3
+
+tradeable: false
+discoverable: false
+enchantable: false
+
+effects:
+  - id: damage_multiplier
+    args:
+      multiplier: "6 + (%distance% / (21 - ceil(%level% / 0.5))) * 0.01 * %level%"
+    triggers:
+      - bow_attack
+      - trident_attack
+
+conditions: [ ]

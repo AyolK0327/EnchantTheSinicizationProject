@@ -1,0 +1,54 @@
+description: Shoot 5 arrows
+type: special
+targets:
+- bow
+- crossbow
+enchantable: true
+max-level: 1
+tradeable: true
+conflicts: []
+effects:
+- args:
+    no_source: false
+    inherit_velocity: true
+  mutators:
+  - args:
+      angle: '7.5'
+    id: spin_velocity
+  id: shoot_arrow
+  triggers:
+  - shoot_bow
+- args:
+    no_source: false
+    inherit_velocity: true
+  mutators:
+  - args:
+      angle: '15'
+    id: spin_velocity
+  id: shoot_arrow
+  triggers:
+  - shoot_bow
+- args:
+    no_source: false
+    inherit_velocity: true
+  mutators:
+  - args:
+      angle: '-15'
+    id: spin_velocity
+  id: shoot_arrow
+  triggers:
+  - shoot_bow
+- args:
+    no_source: false
+    inherit_velocity: true
+  mutators:
+  - args:
+      angle: '-7.5'
+    id: spin_velocity
+  id: shoot_arrow
+  triggers:
+  - shoot_bow
+display-name: Pentashot
+discoverable: true
+conditions: []
+rarity: legendary

@@ -1,0 +1,28 @@
+description: Launches you forwards at &a%placeholder%x&r speed
+type: spell
+targets:
+- sword
+enchantable: true
+max-level: 2
+tradeable: true
+conflicts: []
+placeholder: 5 * %level%
+effects:
+- args:
+    cooldown: 40
+    send_cooldown_message: true
+  effects:
+  - args:
+      velocity: 1.5 * %level%
+    id: pull_to_location
+  - args:
+      volume: 1
+      sound: ENTITY_FIREWORK_ROCKET_LAUNCH
+      pitch: 2
+    id: play_sound
+  triggers:
+  - alt_click
+display-name: Charge
+discoverable: true
+conditions: []
+rarity: legendary

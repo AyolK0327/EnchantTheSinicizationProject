@@ -1,0 +1,22 @@
+display-name: "Stay Frosty"
+description: "Attack speed is increased while sprinting"
+type: normal
+
+targets:
+  - sword
+conflicts: [ ]
+rarity: rare
+max-level: 1
+
+tradeable: true
+discoverable: true
+enchantable: true
+
+effects:
+  - id: attack_speed_multiplier
+    args:
+      multiplier: 2
+    triggers: []
+      
+conditions: 
+- id: is_sprinting

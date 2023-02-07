@@ -1,0 +1,25 @@
+description: Hitting an entity has a 20% chance to grant &a speed %placeholder%% for
+  five seconds
+type: normal
+targets:
+- hoe
+enchantable: false
+max-level: 3
+tradeable: true
+conflicts:
+- streamlining
+placeholder: '%level%'
+effects:
+- args:
+    duration: 100
+    chance: 20
+    level: '%level%'
+    effect: speed
+    apply_to_player: true
+  id: potion_effect
+  triggers:
+  - melee_attack
+display-name: Killing Wind
+discoverable: true
+conditions: []
+rarity: rare

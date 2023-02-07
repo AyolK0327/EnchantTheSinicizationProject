@@ -1,0 +1,33 @@
+description: 'Crouching grants &aresistance 5&r but &amakes damage output insignificant&r
+  and &afreezes you in place&r '
+type: normal
+targets:
+- leggings
+enchantable: true
+max-level: 1
+tradeable: true
+conflicts: []
+placeholder: '%level%'
+effects:
+- args:
+    level: 5
+    effect: damage_resistance
+  id: permanent_potion_effect
+  triggers: []
+- args:
+    level: 10
+    effect: slow
+  id: permanent_potion_effect
+  triggers: []
+- args:
+    multiplier: 0.5
+  id: damage_multiplier
+  triggers:
+  - melee_attack
+  - bow_attack
+  - trident_attack
+display-name: Turtle Up
+discoverable: true
+conditions:
+- id: is_sneaking
+rarity: epic

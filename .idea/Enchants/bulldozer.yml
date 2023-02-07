@@ -1,0 +1,29 @@
+description: '&7Ломает блоки 3x3'
+type: special
+targets:
+- pickaxe
+enchantable: true
+max-level: 1
+tradeable: true
+conflicts:
+- megabulldozer
+effects:
+- args:
+    cooldown: 0.05
+    send_cooldown_message: false
+  effects:
+  - args:
+      blacklisted_blocks:
+      - bedrock
+      - end_portal_frame
+      - end_portal
+      check_hardness: true
+      disable_on_sneak: true
+      radius: 1
+    id: mine_radius
+  triggers:
+  - mine_block
+display-name: Бульдозер
+discoverable: true
+conditions: []
+rarity: special

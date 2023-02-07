@@ -1,0 +1,18 @@
+description: Massive increase max health &a+%placeholder%
+type: special
+targets:
+- armor
+enchantable: true
+max-level: 3
+tradeable: true
+conflicts:
+- thrive
+placeholder: 3 * %level%
+effects:
+- args:
+    health: (%level%*3)
+  id: bonus_health
+display-name: Prosperity
+discoverable: true
+conditions: []
+rarity: legendary

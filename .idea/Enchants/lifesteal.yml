@@ -1,0 +1,19 @@
+description: Heals &a%placeholder%%&r of damage dealt
+type: normal
+targets:
+- sword
+enchantable: true
+max-level: 6
+tradeable: true
+conflicts: []
+placeholder: '%level% * 10'
+effects:
+- args:
+    amount: '%v% * (%level% * 0.1)'
+  id: give_health
+  triggers:
+  - melee_attack
+display-name: Lifesteal
+discoverable: true
+conditions: []
+rarity: rare

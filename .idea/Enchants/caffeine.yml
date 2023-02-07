@@ -1,0 +1,20 @@
+description: Boosts up your %ecoskills_speed_name%&r by &a+%placeholder%
+type: normal
+targets:
+- boots
+enchantable: true
+max-level: 6
+tradeable: true
+conflicts: []
+placeholder: 5 * %level%
+dependencies:
+- EcoSkills
+effects:
+- args:
+    stat: speed
+    amount: 5 * %level%
+  id: add_stat
+display-name: Caffeine
+discoverable: true
+conditions: []
+rarity: uncommon

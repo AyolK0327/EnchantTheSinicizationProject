@@ -1,0 +1,21 @@
+description: Increases headshot damage by &a%placeholder%%
+type: normal
+targets:
+- bow
+- crossbow
+- trident
+enchantable: true
+max-level: 3
+tradeable: true
+conflicts: []
+placeholder: 10 * %level%
+effects:
+- args:
+    multiplier: 1 + 0.1 * %level%
+  id: damage_multiplier
+  triggers:
+  - headshot
+display-name: Skull Puncture
+discoverable: true
+conditions: []
+rarity: rare

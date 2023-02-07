@@ -1,0 +1,38 @@
+description: Levitates you in the air for &a%placeholder%&r seconds
+type: spell
+targets:
+- sword
+enchantable: true
+max-level: 2
+tradeable: true
+conflicts: []
+placeholder: '%level% / 4'
+effects:
+- args:
+    cooldown: 90
+    send_cooldown_message: true
+  effects:
+  - args:
+      duration: 5 * %level%
+      level: 25
+      effect: levitation
+      apply_to_player: true
+    id: potion_effect
+  - args:
+      duration: 10
+      delay: 18 * %level%
+      level: 1
+      effect: slow_falling
+      apply_to_player: true
+    id: potion_effect
+  - args:
+      volume: 1
+      sound: entity_firework_rocket_large_blast
+      pitch: 1
+    id: play_sound
+  triggers:
+  - alt_click
+display-name: Ascend
+discoverable: true
+conditions: []
+rarity: legendary

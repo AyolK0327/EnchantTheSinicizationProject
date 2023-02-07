@@ -1,0 +1,18 @@
+description: Holding this tool will give you fire resistance
+type: normal
+targets:
+- pickaxe
+enchantable: true
+max-level: 1
+tradeable: true
+conflicts: []
+effects:
+- args:
+    level: 1
+    effect: fire_resistance
+  id: permanent_potion_effect
+  triggers: []
+display-name: Heatproof
+discoverable: true
+conditions: []
+rarity: epic

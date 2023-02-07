@@ -1,0 +1,22 @@
+description: Gives a &a%placeholder%%&r chance to fail to break blocks
+type: curse
+targets:
+- axe
+- hoe
+- pickaxe
+- shovel
+enchantable: false
+max-level: 1
+tradeable: true
+conflicts: []
+placeholder: 15 * %level%
+effects:
+- args:
+    chance: 15 * %level%
+  id: cancel_event
+  triggers:
+  - mine_block
+display-name: Curse of Breaklessness
+discoverable: true
+conditions: []
+rarity: legendary

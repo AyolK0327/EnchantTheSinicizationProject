@@ -1,0 +1,22 @@
+description: Grants resistance to fire and lava damage
+type: normal
+targets:
+- elytra
+enchantable: true
+max-level: 1
+tradeable: true
+conflicts: []
+effects:
+- args:
+    multiplier: 0.25
+  id: damage_multiplier
+  filters:
+    damageCause:
+    - fire
+    - lava
+  triggers:
+  - take_damage
+display-name: Leidenfrost
+discoverable: true
+conditions: []
+rarity: rare

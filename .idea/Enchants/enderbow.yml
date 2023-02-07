@@ -1,0 +1,36 @@
+display-name: "Enderbow"
+description: "Teleport to the landing spot of your arrow"
+type: special
+
+targets:
+  - bow
+  - crossbow
+conflicts:
+  - buckshot
+  - succession
+  - tripleshot
+  - pentashot
+rarity: special
+max-level: 1
+
+tradeable: true
+discoverable: true
+enchantable: false
+
+effects:
+  - id: run_chain_inline
+    args:
+      runtype: normal
+      cooldown: 2
+      chain:
+      - id: teleport
+        args: []
+      - id: play_sound
+        args:
+          sound: entity_enderman_teleport
+          pitch: 1
+          volume: 4
+    triggers:
+      - projectile_hit
+      
+conditions: [ ]

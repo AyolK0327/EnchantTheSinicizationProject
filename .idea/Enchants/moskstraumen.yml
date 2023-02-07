@@ -1,0 +1,19 @@
+description: Thrown tridents do massive damage
+type: special
+targets:
+- trident
+enchantable: true
+max-level: 1
+tradeable: true
+conflicts:
+- maelstrom
+effects:
+- args:
+    multiplier: 2.5
+  id: damage_multiplier
+  triggers:
+  - trident_attack
+display-name: Moskstraumen
+discoverable: true
+conditions: []
+rarity: veryspecial

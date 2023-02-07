@@ -1,0 +1,19 @@
+description: Holding a trident with this enchant will grant &aspeed %placeholder%&r
+type: special
+targets:
+- trident
+enchantable: true
+max-level: 1
+tradeable: true
+conflicts: []
+placeholder: '%level%'
+effects:
+- args:
+    level: '%level%'
+    effect: speed
+  id: permanent_potion_effect
+  triggers: []
+display-name: Cyclone
+discoverable: true
+conditions: []
+rarity: special

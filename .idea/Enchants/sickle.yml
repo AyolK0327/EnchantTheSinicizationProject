@@ -1,0 +1,22 @@
+description: Has a 15% chance to inflict &a%placeholder%&r ticks of bleed to an enemy
+type: normal
+targets:
+- hoe
+enchantable: false
+max-level: 3
+tradeable: true
+conflicts: []
+placeholder: 6 + (2 * (1 - %level%))
+effects:
+- args:
+    damage: 1
+    amount: 6 + (2 * (1 - %level%))
+    chance: 15
+    interval: 20
+  id: bleed
+  triggers:
+  - melee_attack
+display-name: Sickle
+discoverable: true
+conditions: []
+rarity: rare

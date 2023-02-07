@@ -1,0 +1,21 @@
+description: '&a50% chance&r to strike lightning on hit'
+type: special
+targets:
+- bow
+- crossbow
+enchantable: true
+max-level: 1
+tradeable: true
+conflicts:
+- zeus
+effects:
+- args:
+    amount: 1
+    chance: 50
+  id: strike_lightning
+  triggers:
+  - bow_attack
+display-name: Tarhunna
+discoverable: true
+conditions: []
+rarity: veryspecial

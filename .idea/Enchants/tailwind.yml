@@ -1,0 +1,22 @@
+description: Gain a &aspeed %placeholder%&r while wearing
+type: normal
+targets:
+- elytra
+enchantable: true
+max-level: 2
+tradeable: true
+conflicts:
+- propel
+- hang_time
+placeholder: '%level%'
+effects:
+- args:
+    level: '%level%'
+    effect: speed
+    apply_to_player: true
+  id: permanent_potion_effect
+  triggers: []
+display-name: Tailwind
+discoverable: true
+conditions: []
+rarity: rare

@@ -1,0 +1,19 @@
+description: Wearing elytras with this enchant gives you &aabsorption 3&r
+type: normal
+targets:
+- elytra
+enchantable: true
+max-level: 2
+tradeable: true
+conflicts:
+- sound_barrier
+effects:
+- args:
+    level: 3
+    effect: absorption
+  id: permanent_potion_effect
+  triggers: []
+display-name: Spirit Guard
+discoverable: true
+conditions: []
+rarity: epic

@@ -1,0 +1,25 @@
+description: Chance to inflict hunger, poison, and nausea to your opponent
+type: normal
+targets:
+- sword
+- bow
+- axe
+- hoe
+enchantable: true
+max-level: 1
+tradeable: true
+conflicts:
+- toxic
+- famine
+effects:
+- args:
+    chain: dev_chain
+    chance: 15
+  id: run_chain
+  triggers:
+  - bow_attack
+  - melee_attack
+display-name: Devastation
+discoverable: false
+conditions: []
+rarity: epic

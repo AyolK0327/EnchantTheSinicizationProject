@@ -1,0 +1,27 @@
+description: Kills grant you a brief burst of &aregeneration 2&r
+type: special
+targets:
+- sword
+- axe
+- bow
+- crossbow
+- trident
+- hoe
+enchantable: true
+max-level: 1
+tradeable: true
+conflicts: []
+placeholder: '%level%'
+effects:
+- args:
+    duration: 100
+    level: 2
+    effect: regeneration
+    apply-to-player: true
+  id: potion_effect
+  triggers:
+  - kill
+display-name: Soul Absorb
+discoverable: true
+conditions: []
+rarity: special

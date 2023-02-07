@@ -1,0 +1,20 @@
+description: Teleports you &a%placeholder%&r blocks in the direction you are facing
+type: spell
+targets:
+- sword
+enchantable: true
+max-level: 3
+tradeable: true
+conflicts: []
+placeholder: 3 + ((%level% - 1) * 2)
+effects:
+- args:
+    cooldown: 15
+    distance: 3 + ((%level% - 1) * 2)
+  id: transmission
+  triggers:
+  - alt_click
+display-name: Dash
+discoverable: true
+conditions: []
+rarity: rare

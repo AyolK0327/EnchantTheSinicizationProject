@@ -1,0 +1,25 @@
+display-name: "Karşı saldırı"
+description: "Gelen saldırıyı engelleyerek rakibine uygular"
+type: epic
+
+targets:
+  - shield
+conflicts:
+rarity: epic
+max-level: 5
+
+tradeable: true
+discoverable: true
+enchantable: true
+
+effects:
+  - id: damage_victim
+    args:
+      chance: "%level% * 2"
+      damage: 12
+      use_source: false 
+    triggers:
+    - shield_block
+      
+conditions: [ ]
+

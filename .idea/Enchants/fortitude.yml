@@ -1,0 +1,21 @@
+description: Gives a &a%placeholder%%&r bonus to damage dealt
+type: normal
+targets:
+- armor
+enchantable: true
+max-level: 2
+tradeable: true
+conflicts: []
+placeholder: '%level% * 2'
+effects:
+- args:
+    multiplier: 1 + %level% * 0.02
+  id: damage_multiplier
+  triggers:
+  - melee_attack
+  - bow_attack
+  - trident_attack
+display-name: Fortitude
+discoverable: true
+conditions: []
+rarity: legendary

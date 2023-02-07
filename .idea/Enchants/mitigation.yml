@@ -1,0 +1,23 @@
+description: Gives a &a%placeholder%%&r chance to absorb enemy damage
+type: normal
+targets:
+- armor
+enchantable: true
+max-level: 4
+tradeable: true
+conflicts: []
+placeholder: 1 + 1 * %level%
+effects:
+- args:
+    duration: 100
+    chance: 1 + 1 * %level%
+    level: 1
+    effect: absorption
+    apply_to_player: true
+  id: potion_effect
+  triggers:
+  - take_entity_damage
+display-name: Mitigation
+discoverable: true
+conditions: []
+rarity: epic

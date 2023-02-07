@@ -1,0 +1,135 @@
+description: '&a5% &8chance of giving &e10 Tokens &8per ore mined.'
+type: normal
+targets:
+- pickaxe
+enchantable: true
+max-level: 1
+tradeable: true
+conflicts:
+- blast_mining
+- xray
+- dynamite
+- infernal_touch
+effects:
+- args:
+    chance: 5
+    message: '&7You found &e10 Tokens'
+    action_bar: false
+  id: send_message
+  filters:
+    blocks:
+    - coal_ore
+    - deepslate_coal_ore
+    - gold_ore
+    - deepslate_gold_ore
+    - emerald_ore
+    - deepslate_emerald_ore
+    - redstone_ore
+    - deepslate_redstone_ore
+    - copper_ore
+    - deepslated_copper_ore
+    - lapis_ore
+    - deepslate_ore
+    - iron_ore
+    - deepslate_iron_ore
+    - diamond_ore
+    - deepslate_diamond_ore
+    - ancient_debris
+    - nether_gold_ore
+    - nether_quartz_ore
+  triggers:
+  - mine_block
+- args:
+    volume: 10
+    chance: 5
+    sound: block_note_block_bell
+    pitch: 0.7
+  id: play_sound
+  filters:
+    blocks:
+    - coal_ore
+    - deepslate_coal_ore
+    - gold_ore
+    - deepslate_gold_ore
+    - emerald_ore
+    - deepslate_emerald_ore
+    - redstone_ore
+    - deepslate_redstone_ore
+    - copper_ore
+    - deepslated_copper_ore
+    - lapis_ore
+    - deepslate_ore
+    - iron_ore
+    - deepslate_iron_ore
+    - diamond_ore
+    - deepslate_diamond_ore
+    - ancient_debris
+    - nether_gold_ore
+    - nether_quartz_ore
+  triggers:
+  - mine_block
+- args:
+    chance: 5
+    particle-amount: 5
+    animation: trace
+    use-eye-location: true
+    particle: VILLAGER_HAPPY
+    tick-multiplier: 1.1
+    particle_args:
+      spacing: 0.5
+    entity: player
+  id: particle_animation
+  filters:
+    blocks:
+    - coal_ore
+    - deepslate_coal_ore
+    - gold_ore
+    - deepslate_gold_ore
+    - emerald_ore
+    - deepslate_emerald_ore
+    - redstone_ore
+    - deepslate_redstone_ore
+    - copper_ore
+    - deepslated_copper_ore
+    - lapis_ore
+    - deepslate_ore
+    - iron_ore
+    - deepslate_iron_ore
+    - diamond_ore
+    - deepslate_diamond_ore
+    - ancient_debris
+    - nether_gold_ore
+    - nether_quartz_ore
+  triggers:
+  - mine_block
+- args:
+    chance: 5
+    command: deluxesellwands tokens add %player% 10 -s
+  id: run_command
+  filters:
+    blocks:
+    - coal_ore
+    - deepslate_coal_ore
+    - gold_ore
+    - deepslate_gold_ore
+    - emerald_ore
+    - deepslate_emerald_ore
+    - redstone_ore
+    - deepslate_redstone_ore
+    - copper_ore
+    - deepslated_copper_ore
+    - lapis_ore
+    - deepslate_ore
+    - iron_ore
+    - deepslate_iron_ore
+    - diamond_ore
+    - deepslate_diamond_ore
+    - ancient_debris
+    - nether_gold_ore
+    - nether_quartz_ore
+  triggers:
+  - mine_block
+display-name: Token Collector
+discoverable: true
+conditions: []
+rarity: legendary
